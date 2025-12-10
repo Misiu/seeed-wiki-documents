@@ -22,7 +22,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>OpenEPaperLink BLE DIY Kit (name and link need to be updated</th>
+        <th>OpenEPaperLink BLE DIY Kit</th>
     </tr>
     <tr>
     <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/2.jpg"/></div>
@@ -61,8 +61,8 @@ OpenEPaperLink (OEPL) is an open-source project that provides firmware and proto
 
 The [OEPL_BLE firmware](https://github.com/OpenEPaperLink/OEPL_BLE) enables:
 - **Bluetooth Low Energy (BLE) Communication**: Direct wireless control without requiring dedicated access points
-- **Dedicated Hardware Support**: Works with purpose-built boards like the XIAO ePaper Board EN04, EE04 and others
-- **Web-based flashing and Configuration**: Easy setup and image upload through web interface at [openepaperlink.org/ble](https://openepaperlink.org/ble/)
+- **Dedicated Hardware Support**: Works with purpose-built boards like the XIAO ePaper Board EN04, EE04, and others
+- **Web-based Flashing and Configuration**: Easy setup and image upload through web interface at [openepaperlink.org/ble](https://openepaperlink.org/ble/)
 - **Multiple Display Support**: Compatible with various e-paper sizes and controllers
 
 
@@ -128,7 +128,7 @@ Choose **"Seeed EN04 4.26"** or **"Seeed EN04 7.3"** from the device list (based
 Click the **"Download Firmware"** button and save the **"NRF52840.uf2"** on your hard drive.
 
 **Step 5. Install Firmware**  
-Connect the EN04 board to the computer using a USB data cable, and then press the reset button twice consecutively.Then you will see a file manager pop up on the PC side. Then copy the donloaded **"NRF52840.uf2"** file to the USB drive that showed up (the USB drive is the EN04 board in DFU mode)
+Connect the EN04 board to the computer using a USB data cable, then press the reset button twice consecutively. You will see a file manager pop up on your PC. Copy the downloaded **"NRF52840.uf2"** file to the USB drive that appears (the USB drive is the EN04 board in DFU mode)
 
 :::tip
 If the installation fails, try:
@@ -138,21 +138,21 @@ If the installation fails, try:
 :::
 
 
-**Step 5. Configure the board**  
-Open the [OEPL Configuration Page](https://openepaperlink.org/ble/config/?config=nrf52840-en04-s6) and connect to your board:
+**Step 6. Configure the Board**  
+Open the [OEPL Configuration Page](https://openepaperlink.org/ble/config/?config=nrf52840-en04-s6) and connect to your board.
 
 (image here)
 
-If you have selected **"Seeed EN04 4.26"** or **"Seeed EN04 7.3"** you will see **"Auto Install to Device"**.
-This is the easiest way to have your DIY Kit configured
+If you selected **"Seeed EN04 4.26"** or **"Seeed EN04 7.3"**, you will see **"Auto Install to Device"**.
+This is the easiest way to configure your DIY Kit.
 
-**Step 5a. Configure different display sizes and battery usage
+**Step 6a. Configure Different Display Sizes and Battery Usage**
 
 TBD
 
-### Verify configuration
+### Verify Configuration
 
-After installation and configuration, the display should show a startup screen (add image below). The device is now ready and can be used to display content via Bluetooth.
+After installation and configuration, the display should show a startup screen (image to be added). The device is now ready to display content via Bluetooth.
 
 
 ## Uploading Images to Display
@@ -160,7 +160,7 @@ After installation and configuration, the display should show a startup screen (
 ### Using the Web Display Tool
 
 **Step 1. Open Display Tool**  
-Visit [OpenEPamerLink BLE Tester](https://openepaperlink.org/ble/display/) in your browser.
+Visit [OpenEPaperLink BLE Tester](https://openepaperlink.org/ble/display/) in your browser.
 
 **Step 2. Connect to Device**  
 Click **"Connect"** and select your OEPL device from the Bluetooth pairing dialog.
@@ -191,19 +191,19 @@ You can create custom display content using:
 
 ### Firmware Installation Issues
 
-**Problem**: PC doesnt see a new USB Drive after conencting the EN04 board
+**Problem**: PC doesn't detect a new USB drive after connecting the EN04 board
 - **Solution**: 
   - Try a different USB cable (data cable, not power-only)
   - Press the reset button twice after connecting the board
 
 
-### COnfiguraion Issues
+### Configuration Issues
 
 **Problem**: The EN04 board isn't discovered
 - **Solution**:
-  - Verify the led on the board blinks - you have powered the device
+  - Verify the LED on the board blinks - this confirms the device is powered
   - Try rebooting the board
-  - Verify the firmware installation or copy the file once again
+  - Verify the firmware installation or copy the file again
 
 **Problem**: Display shows nothing after firmware installation
 - **Solution**:
@@ -231,8 +231,8 @@ You can create custom display content using:
 
 **Problem**: Short battery life
 - **Solution**:
-  - Configure longer sleep intervals in configurator
-  - Always use the lates version of the firmware, each version optimizes the battery usage
+  - Configure longer sleep intervals in the configurator
+  - Always use the latest version of the firmware; each version optimizes battery usage
   - Reduce display refresh frequency
   - Verify battery is fully charged (4.2V for Li-Po)
 
