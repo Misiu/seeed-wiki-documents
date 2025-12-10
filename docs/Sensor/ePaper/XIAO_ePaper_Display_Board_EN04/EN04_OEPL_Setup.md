@@ -25,7 +25,7 @@ import Steppers from '@site/src/components/utils/Stepper';
         <th>OpenEPaperLink BLE DIY Kit</th>
     </tr>
     <tr>
-    <td><div align="center"><img width ={300} src="https://github-production-user-asset-6210df.s3.amazonaws.com/1741838/525017977-e72b5b6e-f477-467b-981d-5ffe05615f49.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251210%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251210T200107Z&X-Amz-Expires=300&X-Amz-Signature=b59d2e54309abae6ee04489a687abc1eca79f39956dfe6c2735ef4a898ead200&X-Amz-SignedHeaders=host"/></div>
+    <td><div align="center"><img width ={300} src="https://raw.githubusercontent.com/Misiu/seeed-wiki-documents/docusaurus-version/static/img/en04/1.jpg"/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-nRF52840-EN04-p-6589.html" target="_blank">
                 <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
@@ -84,7 +84,7 @@ The metal side of the FPC cable should face upwards, otherwise, no content will 
 Please follow the installation tutorial below, many people get it wrong.
 :::
 
-<div style={{textAlign:'center'}}><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/1741838/525017977-e72b5b6e-f477-467b-981d-5ffe05615f49.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251210%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251210T200107Z&X-Amz-Expires=300&X-Amz-Signature=b59d2e54309abae6ee04489a687abc1eca79f39956dfe6c2735ef4a898ead200&X-Amz-SignedHeaders=host" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/Misiu/seeed-wiki-documents/docusaurus-version/static/img/en04/1.jpg" style={{width:600, height:'auto'}}/></div>
 
 **Step 2. Attach the Battery**  
 Connect the battery cable to the JST connector on the driver board, ensuring correct polarity (red wire to +, black to -).  
