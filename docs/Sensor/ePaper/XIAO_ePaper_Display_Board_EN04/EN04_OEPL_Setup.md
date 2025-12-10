@@ -89,7 +89,7 @@ Please follow the installation tutorial below, many people get it wrong.
 **Step 2. Attach the Battery**  
 Connect the battery cable to the JST connector on the driver board, ensuring correct polarity (red wire to +, black to -).  
 
-<div style={{textAlign:'center'}}><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/1741838/525020218-945edbab-c546-4fef-b480-ee1524d33edf.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251210%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251210T200721Z&X-Amz-Expires=300&X-Amz-Signature=c9d62d562bca5f7078bea7955ec276721a0dfd5cf87f3866c9a05f7f3c6b3e88&X-Amz-SignedHeaders=host" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/Misiu/seeed-wiki-documents/docusaurus-version/static/img/en04/battery.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::caution
 Double check the polarity, different batteries can have mixed wiring. If the red and black are misaligned, they can be easily removed from JST connector using a needle and then positioned correctly.
@@ -129,7 +129,7 @@ If the installation fails, try:
 Open the [OEPL Configuration Page](https://openepaperlink.org/ble/config/?config=nrf52840-en04-s6) and connect to your board.
 
 
-<div style={{textAlign:'center'}}><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/1741838/525021717-d9797294-ef68-41a1-81d3-f3024ed051dd.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251210%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251210T201205Z&X-Amz-Expires=300&X-Amz-Signature=9c4a916a5dfaad6e3cac4c694457f1ef3817ac0e78df0dbba6e5b3ea201f56c3&X-Amz-SignedHeaders=host" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/Misiu/seeed-wiki-documents/docusaurus-version/static/img/en04/2.png" style={{width:600, height:'auto'}}/></div>
 
 
 If you selected **"Seeed EN04 4.26"** or **"Seeed EN04 7.3"**, you will see **"Auto Install to Device"**.
@@ -168,7 +168,7 @@ Click **"Connect"** and select your OEPL device from the Bluetooth pairing dialo
 Click **"Select Image"** and choose an image file from your computer.
 
 
-<div style={{textAlign:'center'}}><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/1741838/525025512-bd864447-a8ad-4bfb-a963-29940957b3da.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251210%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251210T202254Z&X-Amz-Expires=300&X-Amz-Signature=8a6d5cb84df433e70d0fca9018b1198d2dcc08e9f7a9fddebf76190cb1c047df&X-Amz-SignedHeaders=host" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/Misiu/seeed-wiki-documents/docusaurus-version/static/img/en04/3.png" style={{width:500, height:'auto'}}/></div>
 
 
 
@@ -228,7 +228,7 @@ Once Home Assistant has restarted:
 You will see a new image displayed on the display, showing that the device is connected to Home Assistant.
 
 
-<div style={{textAlign:'center'}}><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/1741838/525025512-bd864447-a8ad-4bfb-a963-29940957b3da.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251210%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251210T202254Z&X-Amz-Expires=300&X-Amz-Signature=8a6d5cb84df433e70d0fca9018b1198d2dcc08e9f7a9fddebf76190cb1c047df&X-Amz-SignedHeaders=host" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/Misiu/seeed-wiki-documents/docusaurus-version/static/img/en04/4.jpg" style={{width:500, height:'auto'}}/></div>
 
 
 
