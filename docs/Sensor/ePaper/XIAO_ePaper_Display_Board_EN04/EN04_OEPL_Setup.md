@@ -1,12 +1,13 @@
 ---
-description: Setup and Configure OpenEPaperLink with XIAO ePaper Display Board(nRF52840) - EN04
-title: Setup and Configure OpenEPaperLink with XIAO ePaper Display Board(nRF52840) - EN04
+description: Setup and Configure OpenEPaperLink with OpenEPaperLink BLE DIY Kit
+title: Setup and Configure OpenEPaperLink with OpenEPaperLink BLE DIY Kit
 keywords:
   - epaper
   - oepl
+  - en04
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
 sidebar_position: 1
-slug: /OEPL_EN04
+slug: /epaper_EN04_OEPL
 last_update:
   date: 12/10/2025
   author: Tomasz
@@ -16,15 +17,15 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Setup and Configure OpenEPaperLink with XIAO ePaper Display EN04
+# Setup and Configure OpenEPaperLink with OpenEPaperLink BLE DIY Kit
 
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>XIAO ePaper Display Board EN04</th>
+        <th>OpenEPaperLink BLE DIY Kit (name and link need to be updated</th>
     </tr>
     <tr>
-    <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.jpg"/></div>
+    <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/2.jpg"/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-nRF52840-EN04-p-6589.html" target="_blank">
                 <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
@@ -36,108 +37,16 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introduction
 
-Powered by **XIAO nRF52840** Plus, the display board EN04 supports both **24-pin** and **50-pin** ePaper displays. It features a JST 2.0 mm battery connector with power switch, built-in charging IC, NFC function and comes with one reset and three user buttons. Well-suited for low-power ePaper projects such as digital signage, electronic labels, and portable information boards.
+Powered by **XIAO nRF52840** Plus, the OpenEPaperLink BLE DIY Kit is the easiest way to get started with Bluetooth-enabled e-paper displays using the OEPL_BLE firmware. Unlike traditional OpenEPaperLink systems that require dedicated Access Points with 802.15.4 radios, this kit uses Bluetooth Low Energy for direct wireless control from your phone, computer, or Home Assistant.
 
-### Featrue
+The OpenEPaperLink BLE DIY Kit includes:
+- **XIAO ePaper Board EN04** x1 - Custom designed board with nRF52840, battery management, and display driver
+- **7.3" spectra™ 6 E-Ink / ePaper Display** x1 - 800x480 resolution e-paper panel
+- **FPC Extension Cable (10 cm)** x1 - For flexible display placement
+- **FPC Connector** x1 - For connecting display to board
+- **2000mAh Battery** x1 - Li-Po battery for portable operation
 
-- **Powered by XIAO nRF52840 Plus:** Works immediately when connected to a compatible ePaper display.
-- **Versatile Display Support:** Compatible with a wide range of ePaper screens, supporting both 24-Pin and 50-Pin interfaces with easy switching via jumper caps.
-- **BAT Connector with Switch:** Provides simple battery connection and integrates a switch, enabling efficient power management and energy savings.
-- **User-Friendly Buttons:** Includes 1 reset button and 3 user-programmable buttons, offering flexibility for project acceleration and customizable functions.
-
-### Specification
-
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Processor</th>
-      <td>XIAO nRF52840 Plus</td>
-    </tr>
-    <tr>
-      <th>ePaper Connector</th>
-      <td>FPC 24 Pin 0.5mm<br />FPC 50 Pin 0.5mm</td>
-    </tr>
-    <tr>
-      <th>Battery Connector</th>
-      <td>JST 2.0mm</td>
-    </tr>
-    <tr>
-      <th>Switch</th>
-      <td>Battery Power ON/OFF</td>
-    </tr>
-    <tr>
-      <th>Power Supply</th>
-      <td>- 3.7V Li-Battery<br />- USB Type-C</td>
-    </tr>
-    <tr>
-      <th>Button</th>
-      <td>- 1x Reset button<br />- 3x User button</td>
-    </tr>
-  </tbody>
-</table>
-
-### ePaper Board Selection Guide
-
-<table>
-    <thead>
-        <tr>
-            <th>Product</th>
-            <th>ePaper Display Board EN04</th>
-<th><a href="https://wiki.seeedstudio.com/XIAO-eInk-Expansion-Board/">ePaper Breakout</a></th>
-<th><a href="https://wiki.seeedstudio.com/xiao_eink_expansion_board_v2/">ePaper Driver Board</a></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>Processor</th>
-            <td>XIAO nRF52840 Plus</td>
-            <td>XIAO Series</td>
-            <td>XIAO Series</td>
-        </tr>
-        <tr>
-            <th>Compatible ePaper Displays</th>
-            <td>24 Pin ePaper<br />50 Pin ePaper</td>
-            <td>24 Pin ePaper</td>
-            <td>24 Pin ePaper</td>
-        </tr>
-        <tr>
-            <th>ePaper Connector</th>
-            <td>FPC 24 Pin, 0.5mm<br />FPC 50 Pin, 0.5mm</td>
-            <td>FPC 24 Pin 0.5mm</td>
-            <td>FPC 24 Pin 0.5mm</td>
-        </tr>
-        <tr>
-            <th>Battery Connector</th>
-            <td>JST 2.0mm</td>
-            <td>/</td>
-            <td>JST 2.0mm</td>
-        </tr>
-        <tr>
-            <th>Switch</th>
-            <td>Battery Power ON/OFF</td>
-            <td>/</td>
-            <td>Battery Power ON/OFF</td>
-        </tr>
-        <tr>
-            <th>Button</th>
-            <td>1x Reset button<br />3x User button</td>
-            <td>/</td>
-            <td>/</td>
-        </tr>
-        <tr>
-            <th>Extension IO Port</th>
-            <td>/</td>
-            <td>connection of others controller</td>
-            <td>connection of additional sensors</td>
-        </tr>
-    </tbody>
-</table>
+Everything is ready to use - just assemble the hardware, install the firmware, configure the device via web browser, and start displaying custom content!
 
 ### Application
 
@@ -145,257 +54,209 @@ Powered by **XIAO nRF52840** Plus, the display board EN04 supports both **24-pin
 - **Energy Monitoring**: Show energy consumption data from smart meters, helping homeowners track and manage their energy usage more efficiently.
 - **Security Alerts**: Display alerts and notifications about security events, such as motion detection or door/window sensor activation.
 - **Smart Thermostat Display**: Show temperature and humidity levels, as well as control settings for your smart thermostat.
-- **Digital Photo Frame**: Create a WiFi-enabled digital photo frame that can display images from your smart home network.
 
-## Hardware Overview
+## What is [OpenEPaperLink](https://openepaperlink.de/)?
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/hardwareoview.png" style={{width:900, height:'auto'}}/></div>
+OpenEPaperLink (OEPL) is an open-source project that provides firmware and protocols for e-paper displays. While the main OEPL project focuses on repurposing commercial Electronic Shelf Labels (ESL), the **OEPL_BLE firmware** is designed specifically for custom hardware builds using microcontrollers like the nRF52840 and ESP32.
 
-<!-- :::tip
+The [OEPL_BLE firmware](https://github.com/OpenEPaperLink/OEPL_BLE) enables:
+- **Bluetooth Low Energy (BLE) Communication**: Direct wireless control without requiring dedicated access points
+- **Dedicated Hardware Support**: Works with purpose-built boards like the XIAO ePaper Board EN04, EE04 and others
+- **Web-based flashing and Configuration**: Easy setup and image upload through web interface at [openepaperlink.org/ble](https://openepaperlink.org/ble/)
+- **Multiple Display Support**: Compatible with various e-paper sizes and controllers
 
-This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC functionality.
 
-::: -->
+### Why use OEPL_BLE?
 
-### Supported ePaper
+The OEPL_BLE firmware offers several advantages for custom e-paper display projects:
 
-#### 24-Pin Connector
+- **No Access Point Required**: Uses Bluetooth Low Energy for direct communication - no additional hardware needed
+- **Web-based Tools**: Easy firmware installation, configuration, and image upload through browser-based tools
+- **Purpose-built Hardware**: Designed for custom boards like the EN04, not limited to commercial ESL tags
+- **Open Source & Free**: Completely open-source project with active development on GitHub
+- **Multiple Microcontroller Support**: Works with nRF52840, ESP32-S3, ESP32-C6, and ESP32-C3
+- **Simple Setup**: Upload firmware via web installer, configure via web interface, no complex programming required
+- **Battery Efficient**: Optimized for low-power operation with e-paper displays
+- **Active Community**: Support and development through [OpenEPaperLink Discord](https://discord.gg/fekcBc5RN5)
 
-- [1.54-inch ePaper - Monochrome 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [2.13-inch ePaper -Flexible Monochrome 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
-- [2.13-inch ePaper - Quadruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [2.9-inch ePaper - Monochorm 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-- [2.9-inch ePaper - Quadruple color 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
-- [4.2-inch ePaper - Monochorm 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [4.26-inch ePaper - Monochorm 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [5.83-inch ePaper - Monochorm 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-- [7.5-inch ePaper - Monochorm 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
-- [7.5-inch ePaper - Tri-Color 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
+The OpenEPaperLink BLE DIY Kit with EN04 board provides everything needed to create a custom BLE-enabled e-paper display right out of the box.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/5.jpg" style={{width:600, height:'auto'}}/></div>
+## Getting Started with OEPL_BLE
+
+### Hardware Assembly
+
+**Step 1. Connect Display to Driver Board**  
+Align the FPC cable with the connector on the XIAO EN04 Board, then secure the latch to ensure a firm connection.  
 
 :::tip
-When using the XIAO ePaper Display Board, make sure to set the jumper according to the ePaper display type:
+The metal side of the FPC cable should face upwards, otherwise, no content will be displayed. Most displays have 1 and 50 on FPC cable, those numbers must align with the ones on the board!
 
-- For 24 Pin ePaper displays → set the jumper to 24 Pin
-
-⚠️ Using the wrong jumper setting may cause the ePaper to fail to display or show abnormal content. Always double-check the jumper position before powering on.
-
+Please follow the installation tutorial below, many people get it wrong.
 :::
 
-#### 50-Pin Connector
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/2.jpg" style={{width:600, height:'auto'}}/></div>
 
-- [7.3-inch Spectra6 ePaper](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
+**Step 2. Attach the Battery**  
+Connect the battery cable to the JST connector on the driver board, ensuring correct polarity (red wire to +, black to -).  
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/4.jpg" style={{width:600, height:'auto'}}/></div>
-:::tip
-When using the XIAO ePaper Display Board, make sure to set the jumper according to the ePaper display type:
-- For 50 Pin ePaper displays → set the jumper to 50 Pin
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/3.jpg" style={{width:600, height:'auto'}}/></div>
 
-⚠️ Using the wrong jumper setting may cause the ePaper to fail to display or show abnormal content. Always double-check the jumper position before powering on.
-
-:::
-
-## Software Overview
-
-### Install Seeed GFX Library
-
-:::tip
-This library has same function as TFT library and no compatible with it. If you have installed TFT library or other similary display libraries, please uninstall it first.
-:::
-
-Download and install the Seeed GFX library from GitHub.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix1.jpg" style={{width:800, height:'auto'}}/></div>
-
-<div align="center">
-<a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to download</button></p>
-</a>
-</div>
-
-Scroll down and open this link.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
-
-Select your device type and it will generate some code. Copy those code and we will use them later.
-
-:::tip
-If you make the wrong choice, the screen will display nothing.
-
-So please make sure your devices or components type.
-:::
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/6.jpg" style={{width:800, height:'auto'}}/></div>
-
-After downloading the library, go to **Sketch** -> **Include Library** -> **Add .ZIP Library** and select the downloaded library.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
-
-There are 4 basic examples, open a basic example you like:
-
-1. Bitmap: Display a bitmap image.
-2. Clock: Display a clock.
-3. Clock_digital: Display a digital clock.
-4. Shape: Display different sizes of words and shapes.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
-
-## Getting Start
-
-Here, we use a 7.5-inch display as an example. The steps are the same for all 24-pin screens; the only difference is selecting the appropriate screen size in the driver.
-
-Create a **new "driver.h" file** and paste those code into it. The code should be like:
-
-```cpp
-#define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen （UC8179）
-#define USE_XIAO_EPAPER_DISPLAY_BOARD_EN04
-```
-
-After that, go to **Tools** -> **Board** -> **XIAO ESP32S3** and **Tools** -> **Port** -> **Select the port your board is connected to**. Then click **Upload** to upload the code.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/7.jpg" style={{width:1000, height:'auto'}}/></div>
-
-Now you will see the feedback in your epaper screen! Following are the results of Helloworld examples.(If nothing appears, please click the reset button)
-
-:::tip
-⚠️ Note: ePaper Cable Orientation
-When connecting the ePaper display to the XIAO ePaper Display Board, make sure the FPC cable is inserted in the correct direction.
-
-⚠️ Do not reverse the connector! Inserting the cable upside down may cause the ePaper to fail to display or even damage the screen/board.
-The image below shows the correct connection:
-:::
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.jpg" style={{width:500, height:'auto'}}/></div>
-
-### User Buttons on XIAO ePaper Display Board(nRF52840) - EN04
-
-The EN04 features three user-programmable buttons that can be used for various control purposes. This section demonstrates how to read button states and respond to button presses using Arduino.
-
-On the EN04, the three buttons are connected to the XIAO nRF52840 Plus:
-
-<table>
-  <thead>
-    <tr>
-      <th>KEY1</th>
-      <th>KEY2</th>
-      <th>KEY3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>GPIO2_D1/A1</th>
-      <th>GPIO3_D2/A2</th>
-      <th>GPIO5_D4/A4</th>
-    </tr>
-  </tbody>
-</table>
-
-
-All buttons are active-low, meaning they read LOW when pressed and HIGH when released.
-
-Basic Button Reading Example
-
-This example demonstrates how to detect button presses and print messages to the serial monitor.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/3.jpg" style={{width:500, height:'auto'}}/></div>
-
-<br></br>
-
-```cpp
-// Define button pin (GPIO2 corresponds to Arduino digital pin 2)
-const int KEY_PIN = 2;
-
-void setup() {
-  // Initialize serial port (baud rate 9600, nRF52840 compatible with default Serial)
-  Serial.begin(9600);
-  // Wait for serial port initialization to complete (for nRF52840 Bluetooth module serial buffer)
-  while (!Serial) delay(10);
-  
-  // Configure button pin as input mode with internal pull-up resistor enabled
-  // Pin is HIGH when not pressed, LOW when pressed
-  pinMode(KEY_PIN, INPUT_PULLUP);
-  
-  Serial.println("nRF52840 Button Detection Program Started");
-  Serial.println("Press the button connected to GPIO2 to see output...");
-}
-
-void loop() {
-  // Read button state (INPUT_PULLUP mode: LOW = pressed, HIGH = not pressed)
-  int keyState = digitalRead(KEY_PIN);
-  
-  // Detect if button is pressed (low level)
-  if (keyState == LOW) {
-    // 50ms delay for debounce handling (avoids false triggers from mechanical button bounce)
-    delay(50);
-    // Read state again to confirm (ensure stable press)
-    if (digitalRead(KEY_PIN) == LOW) {
-      // Print specified content via serial port
-      Serial.println("Hello. This is key1");
-      
-      // Wait for button release (prevent repeated printing during long press)
-      while (digitalRead(KEY_PIN) == LOW) {
-        delay(10); // Short delay to reduce CPU usage
-      }
-    }
-  }
-  
-  // Short delay in main loop for performance optimization
-  delay(10);
-}
-```
-
-### User Battery on XIAO ePaper Display Board(nRF52840) - EN04
-
-When operating on battery power:
-
-- The device will automatically enter low-power mode between refreshes
-
-- Battery life depends on refresh frequency (typically 3-month on a full charge with default settings)
-
-- The device will display a low battery icon in the top-right corner when the battery level is below 20%
-
-:::tip
-If you want to write some code by yourself to read battery voltage, it will be more precise to add 10ms delay before analogRead() function.
+:::caution
+Double check the polarity, different batteries can have mixed wiring. If the red and black are misaligned, they can be easily removed from JST connector using a needle and then positioned correctly.
 :::
 
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/2.jpg" style={{width:600, height:'auto'}}/></div>
 
-```cpp
-#define VOLTAGE_PIN A0 //GPIO1
-#define ADC_ENABLE_PIN A5 //GPIO6
+## Installing OEPL_BLE Firmware
 
-void setup() {
-  Serial.begin(115200);
-  delay(10);
-  
-  pinMode(VOLTAGE_PIN, INPUT);
-  pinMode(ADC_ENABLE_PIN, OUTPUT);
-  digitalWrite(ADC_ENABLE_PIN , HIGH);
-}
+### Web Installer Method (Recommended)
+
+The easiest way to install the OEPL_BLE firmware is using the web-based installer.
+
+**Step 1. Connect Your Board**  
+Connect the XIAO ePaper Board EN04 to your computer using a USB-C cable.
+
+**Step 2. Open Web Installer**  
+Visit the [OEPL Web Installer](https://openepaperlink.org/ble/install/) in a browser.
+
+**Step 3. Select Your Device**  
+Choose **"Seeed EN04 4.26"** or **"Seeed EN04 7.3"** from the device list (based on the display size in your kit).
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/oepl_install_1.png" style={{width:800, height:'auto'}}/></div>
+
+**Step 4. Download the firmware**  
+Click the **"Download Firmware"** button and save the **"NRF52840.uf2"** on your hard drive.
+
+**Step 5. Install Firmware**  
+Connect the EN04 board to the computer using a USB data cable, and then press the reset button twice consecutively.Then you will see a file manager pop up on the PC side. Then copy the donloaded **"NRF52840.uf2"** file to the USB drive that showed up (the USB drive is the EN04 board in DFU mode)
+
+:::tip
+If the installation fails, try:
+- Using a different USB cable (some cables are power-only)
+- Pressing the reset button twice on the EN04 board
+- Using a different USB port
+:::
 
 
-void loop() {
-  analogReadResolution(12); 
-  int adcValue = analogRead(VOLTAGE_PIN);
-  float voltage = (adcValue / 4096.0) *7.16;
-  Serial.print("ADC Value: ");
-  Serial.print(adcValue);
-  Serial.print(" Voltage: ");
-  Serial.print(voltage, 3);
-  Serial.println(" V");
-  delay(10);
-}
-```
+**Step 5. Configure the board**  
+Open the [OEPL Configuration Page](https://openepaperlink.org/ble/config/?config=nrf52840-en04-s6) and connect to your board:
+
+(image here)
+
+If you have selected **"Seeed EN04 4.26"** or **"Seeed EN04 7.3"** you will see **"Auto Install to Device"**.
+This is the easiest way to have your DIY Kit configured
+
+**Step 5a. Configure different display sizes and battery usage
+
+TBD
+
+### Verify configuration
+
+After installation and configuration, the display should show a startup screen (add image below). The device is now ready and can be used to display content via Bluetooth.
 
 
+## Uploading Images to Display
+
+### Using the Web Display Tool
+
+**Step 1. Open Display Tool**  
+Visit [OpenEPamerLink BLE Tester](https://openepaperlink.org/ble/display/) in your browser.
+
+**Step 2. Connect to Device**  
+Click **"Connect"** and select your OEPL device from the Bluetooth pairing dialog.
+
+**Step 3. Select Image**  
+Click **"Select Image"** and choose an image file from your computer.
+
+:::tip
+For best results:
+- Use images that match your display resolution (7.3" display is 800x480 pixels)
+- Black and white images work best on monochrome displays
+- The tool will automatically convert and dither color images
+:::
+
+**Step 4. Upload Image**  
+Click **"Upload Image"** to send the image to your display. The e-paper will refresh and show your image.
+
+### Creating Custom Content
+
+You can create custom display content using:
+- Image editing software (GIMP, Photoshop, etc.)
+- Python scripts with PIL/Pillow library
+- Web-based image generators
+- Home Assistant integration
+
+
+## Troubleshooting
+
+### Firmware Installation Issues
+
+**Problem**: PC doesnt see a new USB Drive after conencting the EN04 board
+- **Solution**: 
+  - Try a different USB cable (data cable, not power-only)
+  - Press the reset button twice after connecting the board
+
+
+### COnfiguraion Issues
+
+**Problem**: The EN04 board isn't discovered
+- **Solution**:
+  - Verify the led on the board blinks - you have powered the device
+  - Try rebooting the board
+  - Verify the firmware installation or copy the file once again
+
+**Problem**: Display shows nothing after firmware installation
+- **Solution**:
+  - Verify the FPC cable is inserted correctly (metal contacts facing up)
+  - Check that the cable is fully inserted and latched
+  - Verify if the configuration is correct (you can connect to the board via the configurator and read the configuration)
+
+
+### Bluetooth Connection Issues
+
+**Problem**: Cannot find OEPL device in Bluetooth pairing
+- **Solution**:
+  - Ensure device is powered on and firmware is installed
+  - Move closer to the device (within 2-3 meters)
+  - Check that Bluetooth is enabled on your computer/phone
+
+**Problem**: Connection drops during image upload
+- **Solution**:
+  - Stay close to the device during upload
+  - Ensure battery is sufficiently charged or power the device via USB
+  - Avoid uploading very large images
+  - Try again with a more stable Bluetooth environment
+
+### Battery and Power Issues
+
+**Problem**: Short battery life
+- **Solution**:
+  - Configure longer sleep intervals in configurator
+  - Always use the lates version of the firmware, each version optimizes the battery usage
+  - Reduce display refresh frequency
+  - Verify battery is fully charged (4.2V for Li-Po)
+
+**Problem**: Device won't charge
+- **Solution**:
+  - Check battery polarity (red: +, black: -)
+  - Verify charging cable provides sufficient current (min. 500mA)
+  - Ensure power switch is in ON position
+  - Test with different USB power source
 
 ## Resources
+
+- **[GitHub]** [OEPL_BLE Firmware Repository](https://github.com/OpenEPaperLink/OEPL_BLE)
+- **[Web Tool]** [Firmware Web Installer](https://openepaperlink.org/ble/install/)
+- **[Web Tool]** [Configuration Builder](https://openepaperlink.org/ble/config/)
+- **[Web Tool]** [Display Tester](https://openepaperlink.org/ble/display/)
+- **[Discord]** [OpenEPaperLink Community](https://discord.gg/fekcBc5RN5)
+- **[Website]** [OpenEPaperLink Official Site](https://openepaperlink.de/)
+- **[Documentation]** [OpenEPaperLink Wiki](https://github.com/OpenEPaperLink/OpenEPaperLink/wiki)
+
+### Hardware Resources
 Coming soon...
-<!-- chang to en04 -->
 <!-- - **[PDF]** [Seeed Studio XIAO ePaper Display EN04 Schematic](https://files.seeedstudio.com/wiki/Epaper/EN04/XIAO_ePaper_Display_Board_EN04_SCH_V1.2.pdf)
-- **[PDF]** [Seeed Studio XIAO ePaper Display EN04 Grabcad 3D File](https://grabcad.com/library/xiao-epaper-display-board-nRF52840-EN04-1)
+- **[3D Model]** [Seeed Studio XIAO ePaper Display EN04 GrabCAD](https://grabcad.com/library/xiao-epaper-display-board-nRF52840-EN04-1)
 - **[ZIP]** [Seeed Studio XIAO ePaper Display EN04 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EN04/XIAO_ePaper_Display_Board_EN04_V1.2_SCH&PCB.zip) -->
 
 
