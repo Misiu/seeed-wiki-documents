@@ -25,7 +25,7 @@ import Steppers from '@site/src/components/utils/Stepper';
         <th>OpenEPaperLink BLE DIY Kit</th>
     </tr>
     <tr>
-    <td><div align="center"><img width ={300} src="https://raw.githubusercontent.com/Misiu/seeed-wiki-documents/docusaurus-version/static/img/en04/1.jpg"/></div>
+    <td><div align="center"><img width ={500} src={require('./hardware.jpg').default}/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-nRF52840-EN04-p-6589.html" target="_blank">
                 <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
@@ -84,12 +84,12 @@ The metal side of the FPC cable should face upwards, otherwise, no content will 
 Please follow the installation tutorial below, many people get it wrong.
 :::
 
-<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/Misiu/seeed-wiki-documents/docusaurus-version/static/img/en04/1.jpg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./hardware.jpg').default} style={{width:600, height:'auto'}}/></div>
 
 **Step 2. Attach the Battery**  
 Connect the battery cable to the JST connector on the driver board, ensuring correct polarity (red wire to +, black to -).  
 
-<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/Misiu/seeed-wiki-documents/docusaurus-version/static/img/en04/battery.jpg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./battery.jpg').default} style={{width:600, height:'auto'}}/></div>
 
 :::caution
 Double check the polarity, different batteries can have mixed wiring. If the red and black are misaligned, they can be easily removed from JST connector using a needle and then positioned correctly.
@@ -129,7 +129,7 @@ If the installation fails, try:
 Open the [OEPL Configuration Page](https://openepaperlink.org/ble/config/?config=nrf52840-en04-s6) and connect to your board.
 
 
-<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/Misiu/seeed-wiki-documents/docusaurus-version/static/img/en04/2.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./step6.png').default} style={{width:600, height:'auto'}}/></div>
 
 
 If you selected **"Seeed EN04 4.26"** or **"Seeed EN04 7.3"**, you will see **"Auto Install to Device"**.
@@ -138,7 +138,7 @@ This is the easiest way to configure your DIY Kit.
 **Step 7. Connect to the Board**
 Press the **""Connect** button on the page. You should see a window showing available OEPl devices, select the new device and press **""Pair**
 
-<div style={{textAlign:'center'}}><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/1741838/525023030-fbeff42a-0c9e-4f89-8bb5-561012d614c1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251210%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251210T201610Z&X-Amz-Expires=300&X-Amz-Signature=9bd2778f4b854412059c5a660fa7a3f2db555df66da7af4d0fc161dbfab6d47c&X-Amz-SignedHeaders=host" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./step7.png').default}  style={{width:500, height:'auto'}}/></div>
 
 
 **Step 7. Save the configuration to the Board**  
@@ -149,7 +149,7 @@ The last thing to do is to press the **"Auto Install to Device"** button, this w
 
 After installation and configuration, the display should show a startup screen. The device is now ready to display content via Bluetooth.
 
-<div style={{textAlign:'center'}}><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/1741838/525024428-a9577e37-0346-4199-b8d0-5fdf43bfbfd8.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251210%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251210T202010Z&X-Amz-Expires=300&X-Amz-Signature=d22c5f729b7960e101f7ba80ca155a4e0aedaf3695528f4953cff28e334f0191&X-Amz-SignedHeaders=host" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./boot_screen.jpg').default} style={{width:500, height:'auto'}}/></div>
 
 
 
@@ -168,7 +168,7 @@ Click **"Connect"** and select your OEPL device from the Bluetooth pairing dialo
 Click **"Select Image"** and choose an image file from your computer.
 
 
-<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/Misiu/seeed-wiki-documents/docusaurus-version/static/img/en04/3.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./upload_image.png').default} style={{width:500, height:'auto'}}/></div>
 
 
 
@@ -228,9 +228,142 @@ Once Home Assistant has restarted:
 You will see a new image displayed on the display, showing that the device is connected to Home Assistant.
 
 
-<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/Misiu/seeed-wiki-documents/docusaurus-version/static/img/en04/4.jpg" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./pair_ha.jpg').default} style={{width:500, height:'auto'}}/></div>
 
+## Using with Home Assistant
 
+Once you have integrated your OpenEPaperLink device with Home Assistant, you can create automations to dynamically update the display content based on sensor data, time, or other events.
+
+### Automating Display Updates
+
+The primary service for updating the display is `open_epaper_link.drawcustom`. This service allows you to draw text, icons, images, and shapes on the display. For a full list of supported types and parameters, please refer to the [drawcustom documentation](https://github.com/OpenEPaperLink/Home_Assistant_Integration/blob/main/docs/drawcustom/supported_types.md).
+
+You can create automations in Home Assistant using either the **Visual Editor** or by writing **YAML** code directly. Below are examples of both methods.
+
+#### Example 1: Display Sensor Data (Visual Editor)
+
+1.  Go to **Settings > Automations & Scenes** and click **Create Automation**.
+2.  Add a **Time Pattern** trigger (e.g., every 10 minutes).
+
+<div style={{textAlign:'center'}}><img src={require('./add_trigger.png').default} style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./fill_trigger.png').default} style={{width:800, height:'auto'}}/></div>
+
+3.  Add an **Action** and select **OpenEPaperLink: Draw Custom Image**.
+
+<div style={{textAlign:'center'}}><img src={require('./add_action.png').default} style={{width:800, height:'auto'}}/></div>
+
+4.  Select your target device.
+
+<div style={{textAlign:'center'}}><img src={require('./pick_target.png').default} style={{width:800, height:'auto'}}/></div>
+
+5.  In the **Payload** field, enter the configuration for your display elements.
+
+<!-- <div style={{textAlign:'center'}}><img src={require('./ha_automation_visual.jpg').default} style={{width:800, height:'auto'}}/></div> -->
+
+**Payload Configuration:**
+
+```yaml
+- type: "text"
+  value: "Living Room"
+  x: "50%"
+  y: 50
+  anchor: "mm"
+  size: 70
+  color: "red"
+- type: "icon"
+  value: "mdi:thermometer"
+  x: "35%"
+  y: 200
+  anchor: "mm"
+  size: 100
+  color: "black"
+- type: "text"
+  value: "{{ states('sensor.living_room_temperature') }}°C"
+  x: "65%"
+  y: 200
+  anchor: "mm"
+  size: 100
+  color: "black"
+- type: "icon"
+  value: "mdi:water-percent"
+  x: "35%"
+  y: 350
+  anchor: "mm"
+  size: 100
+  color: "black"
+- type: "text"
+  value: "{{ states('sensor.living_room_humidity') }}%"
+  x: "65%"
+  y: 350
+  anchor: "mm"
+  size: 100
+  color: "black"
+```
+
+:::caution Important: Entity IDs
+The entity IDs used in the payload above (e.g., `sensor.living_room_temperature`, `sensor.living_room_humidity`) are examples. You **must** replace them with the actual Entity IDs of your sensors in Home Assistant.
+:::
+
+#### Example 2: Countdown Timer (YAML)
+
+For advanced users, you can edit the automation in YAML mode. This automation calculates the days remaining until a specific date (e.g., Christmas) and displays it.
+
+```yaml
+alias: Update ePaper Display - Countdown
+description: Displays days until Christmas
+triggers:
+  - at: "00:00:00"
+    trigger: time
+actions:
+  - variables:
+      days_left: "{{ (as_datetime('2025-12-24').date() - now().date()).days }}"
+  - action: open_epaper_link.drawcustom
+    data:
+      background: white
+      payload:
+        - type: text
+          value: "{{ 'Christmas Countdown' if days_left > 0 else '' }}"
+          x: 50%
+          "y": 50
+          anchor: mm
+          size: 60
+          color: black
+        - type: text
+          value: "{{ days_left if days_left > 0 else '' }}"
+          x: 50%
+          "y": 240
+          anchor: mm
+          size: 250
+          color: red
+        - type: text
+          value: >-
+            {{ 'Day Left' if days_left == 1 else ('Days Left' if days_left > 0
+            else '') }}
+          x: 50%
+          "y": 430
+          anchor: mm
+          size: 60
+          color: black
+        - type: text
+          value: "{{ 'It''s Christmas!!!' if days_left == 0 else '' }}"
+          x: 50%
+          "y": 50%
+          anchor: mm
+          size: 100
+          color: red
+    target:
+      device_id: 2ad706d4aa7c657b6fe99a733cef2253
+```
+
+:::caution Important: Device ID
+The `device_id` shown in the example above (`2ad706d4aa7c657b6fe99a733cef2253`) is just an example. You **must** replace it with the actual Device ID of your own OpenEPaperLink display.
+
+To find your Device ID:
+1. Create a new automation in Home Assistant using the Visual Editor.
+2. Select your OpenEPaperLink device in the action settings.
+3. Switch to **YAML mode** (click the three dots in the top-right corner of the action card).
+4. Copy the `device_id` from the YAML code and paste it into your automation.
+:::
 
 ## Troubleshooting
 
@@ -297,12 +430,6 @@ You will see a new image displayed on the display, showing that the device is co
 - **[Discord]** [OpenEPaperLink Community](https://discord.gg/fekcBc5RN5)
 - **[Website]** [OpenEPaperLink Official Site](https://openepaperlink.de/)
 - **[Documentation]** [OpenEPaperLink Wiki](https://github.com/OpenEPaperLink/OpenEPaperLink/wiki)
-
-### Hardware Resources
-Coming soon...
-<!-- - **[PDF]** [Seeed Studio XIAO ePaper Display EN04 Schematic](https://files.seeedstudio.com/wiki/Epaper/EN04/XIAO_ePaper_Display_Board_EN04_SCH_V1.2.pdf)
-- **[3D Model]** [Seeed Studio XIAO ePaper Display EN04 GrabCAD](https://grabcad.com/library/xiao-epaper-display-board-nRF52840-EN04-1)
-- **[ZIP]** [Seeed Studio XIAO ePaper Display EN04 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EN04/XIAO_ePaper_Display_Board_EN04_V1.2_SCH&PCB.zip) -->
 
 
 
