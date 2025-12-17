@@ -365,6 +365,12 @@ To find your Device ID:
 4. Copy the `device_id` from the YAML code and paste it into your automation.
 :::
 
+## Bonus
+
+If you are looking for a stylish way to mount your display, check out this 3D printed insert for the IKEA RODALM frame. It allows for easy mounting of the display.
+
+- **[MakerWorld]** [Seeed 7.3" Spectra Insert for IKEA RODALM Frame](https://makerworld.com/pl/models/2103122-seeed-7-3-spectra-insert-for-ikea-rodalm-frame)
+
 ## Troubleshooting
 
 ### Firmware Installation Issues
