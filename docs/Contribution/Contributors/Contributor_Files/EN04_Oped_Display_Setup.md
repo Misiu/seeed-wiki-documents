@@ -1,9 +1,9 @@
 ---
-description: Setup and Configure OpenEPaperLink with OpenEPaperLink BLE DIY Kit
-title: Setup and Configure OpenEPaperLink with OpenEPaperLink BLE DIY Kit
+description: Setup and Configure Open Display with Open Display BLE DIY Kit
+title: Setup and Configure Open Display with Open Display BLE DIY Kit
 keywords:
   - epaper
-  - oepl
+  - opendisplay
   - en04
 image: https://github.com/user-attachments/assets/e72b5b6e-f477-467b-981d-5ffe05615f49
 sidebar_position: 1
@@ -22,7 +22,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>OpenEPaperLink BLE DIY Kit</th>
+        <th>Open Display  BLE DIY Kit</th>
     </tr>
     <tr>
     <td><div align="center"><img width ={500} src={require('./hardware.jpg').default}/></div>
@@ -46,20 +46,20 @@ Powered by **XIAO nRF52840** Plus, the XIAO EN04 ePaper Display Board is the eas
 - **Security Alerts**: Display alerts and notifications about security events, such as motion detection or door/window sensor activation.
 - **Smart Thermostat Display**: Show temperature and humidity levels, as well as control settings for your smart thermostat.
 
-## What is [OpenEPaperLink](https://openepaperlink.de/)?
+## What is [Open Display](https://opendisplay.org/)?
 
-OpenEPaperLink (OEPL) is an open-source project that provides firmware and protocols for e-paper displays. While the main OEPL project focuses on repurposing commercial Electronic Shelf Labels (ESL), the **OEPL_BLE firmware** is designed specifically for custom hardware builds using microcontrollers like the nRF52840 and ESP32.
+Open Display is an open-source project that provides firmware and protocols for e-paper displays. While the main OEPL project focuses on repurposing commercial Electronic Shelf Labels (ESL), the **Open Display firmware** is designed specifically for custom hardware builds using microcontrollers like the nRF52840 and ESP32.
 
-The [OEPL_BLE firmware](https://github.com/OpenEPaperLink/OEPL_BLE) enables:
+The [Open Display firmware](https://github.com/OpenDisplay-org/Firmware) enables:
 - **Bluetooth Low Energy (BLE) Communication**: Direct wireless control without requiring dedicated access points
 - **Dedicated Hardware Support**: Works with purpose-built boards like the XIAO ePaper Board EN04, EE04, and others
-- **Web-based Flashing and Configuration**: Easy setup and image upload through web interface at [openepaperlink.org/ble](https://openepaperlink.org/ble/)
+- **Web-based Flashing and Configuration**: Easy setup and image upload through web interface at [opendisplay.org/firmware](https://opendisplay.org/firmware/)
 - **Multiple Display Support**: Compatible with various e-paper sizes and controllers
 
 
-### Why use OEPL_BLE?
+### Why use the Open Display firmware ?
 
-The OEPL_BLE firmware offers several advantages for custom e-paper display projects:
+The Open Display firmware offers several advantages for custom e-paper display projects:
 
 - **No Access Point Required**: Uses Bluetooth Low Energy for direct communication - no additional hardware needed
 - **Web-based Tools**: Easy firmware installation, configuration, and image upload through browser-based tools
@@ -68,7 +68,7 @@ The OEPL_BLE firmware offers several advantages for custom e-paper display proje
 - **Multiple Microcontroller Support**: Works with nRF52840, ESP32-S3, ESP32-C6, and ESP32-C3
 - **Simple Setup**: Upload firmware via drag and drop a single file to your board, configure via web interface, no complex programming required
 - **Battery Efficient**: Optimized for low-power operation with e-paper displays
-- **Active Community**: Support and development through [OpenEPaperLink Discord](https://discord.gg/fekcBc5RN5)
+- **Active Community**: Support and development through [Open Display Discord](https://discord.gg/rqACyQys)
 
 
 ## Getting Started with OEPL_BLE
