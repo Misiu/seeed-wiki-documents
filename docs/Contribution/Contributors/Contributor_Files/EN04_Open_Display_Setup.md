@@ -25,7 +25,7 @@ import Steppers from '@site/src/components/utils/Stepper';
         <th>Open Display BLE DIY Kit</th>
     </tr>
     <tr>
-    <td><div align="center"><img width ={500} src={require('./hardware.jpg').default}/></div>
+    <td><div align="center"><img width ={500} src={require('./01.jpg').default}/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-nRF52840-EN04-p-6589.html" target="_blank">
                 <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
@@ -37,7 +37,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introduction
 
-Powered by **XIAO nRF52840** Plus, the XIAO EN04 ePaper Display Board is the easiest way to get started with Bluetooth-enabled e-paper displays using the Open Display firmware. Unlike other systemms like OpenEPaperLink that require dedicated Access Points with 802.15.4 radios, this board uses Bluetooth Low Energy for direct wireless control from your phone, computer, or Home Assistant.
+Powered by **XIAO nRF52840** Plus, the XIAO EN04 ePaper Display Board is the easiest way to get started with Bluetooth-enabled e-paper displays using the Open Display firmware. Unlike other systems like OpenEPaperLink that require dedicated Access Points with 802.15.4 radios, this board uses Bluetooth Low Energy for direct wireless control from your phone, computer, or Home Assistant.
 
 ### Application
 
@@ -71,7 +71,7 @@ The Open Display firmware offers several advantages for custom e-paper display p
 - **Active Community**: Support and development through [Open Display Discord](https://discord.gg/XmTHz8RfJE)
 
 
-## Getting Started with the open Display Firmare
+## Getting Started with the Open Display Firmware
 
 ### Hardware Assembly
 
@@ -84,12 +84,12 @@ The metal side of the FPC cable should face upwards, otherwise, no content will 
 Please follow the installation tutorial below, many people get it wrong.
 :::
 
-<div style={{textAlign:'center'}}><img src={require('./hardware.jpg').default} style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./01.jpg').default} style={{width:600, height:'auto'}}/></div>
 
 **Step 2. Attach the Battery**  
 Connect the battery cable to the JST connector on the driver board, ensuring correct polarity (red wire to +, black to -).  
 
-<div style={{textAlign:'center'}}><img src={require('./battery.jpg').default} style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./02.jpg').default} style={{width:600, height:'auto'}}/></div>
 
 :::caution
 Double check the polarity, different batteries can have mixed wiring. If the red and black are misaligned, they can be easily removed from JST connector using a needle and then positioned correctly.
@@ -104,7 +104,7 @@ Double check the polarity, different batteries can have mixed wiring. If the red
 The easiest way to install the Open Display firmware is using the web-based installer.
 
 **Step 1. Open Web Installer**  
-Visit the [Open Display Web Installer](opendisplay.org/firmware//install/) in a browser.
+Visit the [Open Display Web Installer](https://opendisplay.org/firmware/install/) in a browser.
 
 **Step 2. Select Your Device**  
 Choose **"Seeed EN04 4.26"** or **"Seeed EN04 7.3"** (or any preset that suits your hardware) from the device list (based on the display size in your kit).
@@ -126,22 +126,22 @@ If the installation fails, try:
 :::
 
 **Step 6. Configure the Board**  
-Open the [Open Display Configuration Page](opendisplay.org/firmware//config/?config=nrf52840-en04-s6) and connect to your board.
+Open the [Open Display Configuration Page](https://opendisplay.org/firmware/config/?config=nrf52840-en04-s6) and connect to your board.
 
 
-<div style={{textAlign:'center'}}><img src={require('./step6.png').default} style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./03.png').default} style={{width:600, height:'auto'}}/></div>
 
 
 If you selected **"Seeed EN04 4.26"** or **"Seeed EN04 7.3"**, you will see **"Auto Install to Device"**.
 This is the easiest way to configure your DIY Kit.
 
 **Step 7. Connect to the Board**
-Press the **""Connect** button on the page. You should see a window showing available Open Display devices, select the new device and press **""Pair**
+Press the **"Connect"** button on the page. You should see a window showing available Open Display devices, select the new device and press **"Pair"**
 
-<div style={{textAlign:'center'}}><img src={require('./step7.png').default}  style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./04.png').default}  style={{width:500, height:'auto'}}/></div>
 
 
-**Step 7. Save the configuration to the Board**  
+**Step 8. Save the configuration to the Board**  
 The last thing to do is to press the **"Auto Install to Device"** button, this will save the configuration to the device.
 
 
@@ -149,7 +149,7 @@ The last thing to do is to press the **"Auto Install to Device"** button, this w
 
 After installation and configuration, the display should show a startup screen. The device is now ready to display content via Bluetooth.
 
-<div style={{textAlign:'center'}}><img src={require('./boot_screen.jpg').default} style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./05.jpg').default} style={{width:500, height:'auto'}}/></div>
 
 
 
@@ -159,7 +159,7 @@ After installation and configuration, the display should show a startup screen. 
 ### Using the Web Display Tool
 
 **Step 1. Open Display Tool**  
-Visit [Open Display BLE Tester](https://opendisplay.org/firmware//display/) in your browser.
+Visit [Open Display BLE Tester](https://opendisplay.org/firmware/display/) in your browser.
 
 **Step 2. Connect to Device**  
 Click **"Connect"** and select your Open Display device from the Bluetooth pairing dialog.
@@ -168,7 +168,7 @@ Click **"Connect"** and select your Open Display device from the Bluetooth pairi
 Click **"Select Image"** and choose an image file from your computer.
 
 
-<div style={{textAlign:'center'}}><img src={require('./upload_image.png').default} style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./06.png').default} style={{width:500, height:'auto'}}/></div>
 
 
 
@@ -210,25 +210,27 @@ For detailed installation instructions, please refer to the [Open Display Home A
 
 The easiest way to install the integration is via **HACS** (Home Assistant Community Store). Click the button below to open the repository directly in HACS:
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=OpenDisplay-org&repository=Home_Assistant_Integration)
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=OpenEpaperLink&repository=Home_Assistant_Integration)
 
 :::info
 After installing the custom integration via HACS, you must **restart Home Assistant** for the changes to take effect.
+
+Please note that the integrationwill change name in the near future!
 :::
 
 **Step 2. Add Discovered Device**
 
 Once Home Assistant has restarted:
 1. Navigate to **Settings > Devices & services**.
-2. You should see your Open display device listed under **Discovered**.
-3. Click on**Add**.
+2. You should see your Open Display device listed under **Discovered**.
+3. Click on **Add**.
 4. A dialog will appear allowing you to set the device **Name** and **Area**.
 5. Click **Finish**. You will be redirected to the device details page where you can manage your e-paper display.
 
 You will see a new image displayed on the display, showing that the device is connected to Home Assistant.
 
 
-<div style={{textAlign:'center'}}><img src={require('./pair_ha.jpg').default} style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./07.jpg').default} style={{width:500, height:'auto'}}/></div>
 
 ## Using with Home Assistant
 
@@ -236,7 +238,7 @@ Once you have integrated your Open Display device with Home Assistant, you can c
 
 ### Automating Display Updates
 
-The primary service for updating the display is `open_epaper_link.drawcustom`. This service allows you to draw text, icons, images, and shapes on the display. For a full list of supported types and parameters, please refer to the [drawcustom documentation](https://github.com/OpenDisplay-org/Home_Assistant_Integration/blob/main/docs/drawcustom/supported_types.md).
+The primary service for updating the display is `open_epaper_link.drawcustom`. This service allows you to draw text, icons, images, and shapes on the display. For a full list of supported types and parameters, please refer to the [drawcustom documentation](https://github.com/OpenEPaperLink/Home_Assistant_Integration/blob/main/docs/drawcustom/supported_types.md).
 
 You can create automations in Home Assistant using either the **Visual Editor** or by writing **YAML** code directly. Below are examples of both methods.
 
@@ -245,16 +247,16 @@ You can create automations in Home Assistant using either the **Visual Editor** 
 1.  Go to **Settings > Automations & Scenes** and click **Create Automation**.
 2.  Add a **Time Pattern** trigger (e.g., every 10 minutes).
 
-<div style={{textAlign:'center'}}><img src={require('./add_trigger.png').default} style={{width:800, height:'auto'}}/></div>
-<div style={{textAlign:'center'}}><img src={require('./fill_trigger.png').default} style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./08.png').default} style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./09.png').default} style={{width:800, height:'auto'}}/></div>
 
 3.  Add an **Action** and select **Open Display: Draw Custom Image**.
 
-<div style={{textAlign:'center'}}><img src={require('./add_action.png').default} style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./10.png').default} style={{width:800, height:'auto'}}/></div>
 
 4.  Select your target device.
 
-<div style={{textAlign:'center'}}><img src={require('./pick_target.png').default} style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./11.png').default} style={{width:800, height:'auto'}}/></div>
 
 5.  In the **Payload** field, enter the configuration for your display elements.
 
