@@ -1,13 +1,13 @@
 ---
-description: Setup and Configure OpenEPaperLink with OpenEPaperLink BLE DIY Kit
-title: Setup and Configure OpenEPaperLink with OpenEPaperLink BLE DIY Kit
+description: Setup and Configure Open Display with Open Display BLE DIY Kit
+title: Setup and Configure Open Display with Open Display BLE DIY Kit
 keywords:
   - epaper
-  - oepl
+  - opendisplay
   - en04
 image: https://github.com/user-attachments/assets/e72b5b6e-f477-467b-981d-5ffe05615f49
 sidebar_position: 1
-slug: /epaper_EN04_OEPL
+slug: /epaper_EN04_OPEN_DISPLAY
 last_update:
   date: 12/10/2025
   author: Tomasz
@@ -17,12 +17,12 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Setup and Configure OpenEPaperLink with OpenEPaperLink BLE DIY Kit
+# Setup and Configure Open Display firmware with the Open Display DIY Kit
 
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>OpenEPaperLink BLE DIY Kit</th>
+        <th>Open Display BLE DIY Kit</th>
     </tr>
     <tr>
     <td><div align="center"><img width ={500} src={require('./hardware.jpg').default}/></div>
@@ -37,7 +37,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introduction
 
-Powered by **XIAO nRF52840** Plus, the XIAO EN04 ePaper Display Board is the easiest way to get started with Bluetooth-enabled e-paper displays using the OEPL_BLE firmware. Unlike traditional OpenEPaperLink systems that require dedicated Access Points with 802.15.4 radios, this board uses Bluetooth Low Energy for direct wireless control from your phone, computer, or Home Assistant.
+Powered by **XIAO nRF52840** Plus, the XIAO EN04 ePaper Display Board is the easiest way to get started with Bluetooth-enabled e-paper displays using the Open Display firmware. Unlike other systemms like OpenEPaperLink that require dedicated Access Points with 802.15.4 radios, this board uses Bluetooth Low Energy for direct wireless control from your phone, computer, or Home Assistant.
 
 ### Application
 
@@ -46,20 +46,20 @@ Powered by **XIAO nRF52840** Plus, the XIAO EN04 ePaper Display Board is the eas
 - **Security Alerts**: Display alerts and notifications about security events, such as motion detection or door/window sensor activation.
 - **Smart Thermostat Display**: Show temperature and humidity levels, as well as control settings for your smart thermostat.
 
-## What is [OpenEPaperLink](https://openepaperlink.de/)?
+## What is [Open Display](https://opendisplay.org/)?
 
-OpenEPaperLink (OEPL) is an open-source project that provides firmware and protocols for e-paper displays. While the main OEPL project focuses on repurposing commercial Electronic Shelf Labels (ESL), the **OEPL_BLE firmware** is designed specifically for custom hardware builds using microcontrollers like the nRF52840 and ESP32.
+Open Display is an open-source project that provides firmware and protocols for e-paper displays. While the other projects like OpenEpaperLink focus on repurposing commercial Electronic Shelf Labels (ESL), the **Open Display firmware** is designed specifically for custom hardware builds using microcontrollers like the nRF52840 and ESP32.
 
-The [OEPL_BLE firmware](https://github.com/OpenEPaperLink/OEPL_BLE) enables:
+The [Open Display firmware](https://github.com/OpenDisplay-org/Firmware) enables:
 - **Bluetooth Low Energy (BLE) Communication**: Direct wireless control without requiring dedicated access points
 - **Dedicated Hardware Support**: Works with purpose-built boards like the XIAO ePaper Board EN04, EE04, and others
-- **Web-based Flashing and Configuration**: Easy setup and image upload through web interface at [openepaperlink.org/ble](https://openepaperlink.org/ble/)
+- **Web-based Flashing and Configuration**: Easy setup and image upload through web interface at [opendisplay.org/firmware](https://opendisplay.org/firmware/)
 - **Multiple Display Support**: Compatible with various e-paper sizes and controllers
 
 
-### Why use OEPL_BLE?
+### Why use the Open Display firmware ?
 
-The OEPL_BLE firmware offers several advantages for custom e-paper display projects:
+The Open Display firmware offers several advantages for custom e-paper display projects:
 
 - **No Access Point Required**: Uses Bluetooth Low Energy for direct communication - no additional hardware needed
 - **Web-based Tools**: Easy firmware installation, configuration, and image upload through browser-based tools
@@ -68,10 +68,10 @@ The OEPL_BLE firmware offers several advantages for custom e-paper display proje
 - **Multiple Microcontroller Support**: Works with nRF52840, ESP32-S3, ESP32-C6, and ESP32-C3
 - **Simple Setup**: Upload firmware via drag and drop a single file to your board, configure via web interface, no complex programming required
 - **Battery Efficient**: Optimized for low-power operation with e-paper displays
-- **Active Community**: Support and development through [OpenEPaperLink Discord](https://discord.gg/fekcBc5RN5)
+- **Active Community**: Support and development through [Open Display Discord](https://discord.gg/XmTHz8RfJE)
 
 
-## Getting Started with OEPL_BLE
+## Getting Started with the open Display Firmare
 
 ### Hardware Assembly
 
@@ -97,14 +97,14 @@ Double check the polarity, different batteries can have mixed wiring. If the red
 
 
 
-## Installing OEPL_BLE Firmware
+## Installing Open Display Firmware
 
 ### Web Installer Method (Recommended)
 
-The easiest way to install the OEPL_BLE firmware is using the web-based installer.
+The easiest way to install the Open Display firmware is using the web-based installer.
 
 **Step 1. Open Web Installer**  
-Visit the [OEPL Web Installer](https://openepaperlink.org/ble/install/) in a browser.
+Visit the [Open Display Web Installer](opendisplay.org/firmware//install/) in a browser.
 
 **Step 2. Select Your Device**  
 Choose **"Seeed EN04 4.26"** or **"Seeed EN04 7.3"** (or any preset that suits your hardware) from the device list (based on the display size in your kit).
@@ -126,7 +126,7 @@ If the installation fails, try:
 :::
 
 **Step 6. Configure the Board**  
-Open the [OEPL Configuration Page](https://openepaperlink.org/ble/config/?config=nrf52840-en04-s6) and connect to your board.
+Open the [Open Display Configuration Page](opendisplay.org/firmware//config/?config=nrf52840-en04-s6) and connect to your board.
 
 
 <div style={{textAlign:'center'}}><img src={require('./step6.png').default} style={{width:600, height:'auto'}}/></div>
@@ -136,7 +136,7 @@ If you selected **"Seeed EN04 4.26"** or **"Seeed EN04 7.3"**, you will see **"A
 This is the easiest way to configure your DIY Kit.
 
 **Step 7. Connect to the Board**
-Press the **""Connect** button on the page. You should see a window showing available OEPl devices, select the new device and press **""Pair**
+Press the **""Connect** button on the page. You should see a window showing available Open Display devices, select the new device and press **""Pair**
 
 <div style={{textAlign:'center'}}><img src={require('./step7.png').default}  style={{width:500, height:'auto'}}/></div>
 
@@ -159,10 +159,10 @@ After installation and configuration, the display should show a startup screen. 
 ### Using the Web Display Tool
 
 **Step 1. Open Display Tool**  
-Visit [OpenEPaperLink BLE Tester](https://openepaperlink.org/ble/display/) in your browser.
+Visit [Open Display BLE Tester](https://opendisplay.org/firmware//display/) in your browser.
 
 **Step 2. Connect to Device**  
-Click **"Connect"** and select your OEPL device from the Bluetooth pairing dialog.
+Click **"Connect"** and select your Open Display device from the Bluetooth pairing dialog.
 
 **Step 3. Select Image**  
 Click **"Select Image"** and choose an image file from your computer.
@@ -201,16 +201,16 @@ To integrate with Home Assistant, you need a Bluetooth-capable setup:
 - **Home Assistant OS/Supervised** on hardware with Bluetooth support
 - **ESPHome Bluetooth Proxy** (recommended for better range)
 
-**Note**: Shelly devices acting as Bluetooth proxies **do not support active connections** required by OEPL, so they cannot be used for this integration.
+**Note**: Shelly devices acting as Bluetooth proxies **do not support active connections** required by Open Display, so they cannot be used for this integration.
 :::
 
 **Step 1. Install Integration**
 
-For detailed installation instructions, please refer to the [OpenEPaperLink Home Assistant Integration Repository](https://github.com/OpenEPaperLink/Home_Assistant_Integration?tab=readme-ov-file#getting-help).
+For detailed installation instructions, please refer to the [Open Display Home Assistant Integration Repository](https://github.com/OpenDisplay-org/Home_Assistant_Integration?tab=readme-ov-file#getting-help).
 
 The easiest way to install the integration is via **HACS** (Home Assistant Community Store). Click the button below to open the repository directly in HACS:
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=OpenEpaperLink&repository=Home_Assistant_Integration)
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=OpenDisplay-org&repository=Home_Assistant_Integration)
 
 :::info
 After installing the custom integration via HACS, you must **restart Home Assistant** for the changes to take effect.
@@ -220,7 +220,7 @@ After installing the custom integration via HACS, you must **restart Home Assist
 
 Once Home Assistant has restarted:
 1. Navigate to **Settings > Devices & services**.
-2. You should see your OEPL device listed under **Discovered**.
+2. You should see your Open display device listed under **Discovered**.
 3. Click on**Add**.
 4. A dialog will appear allowing you to set the device **Name** and **Area**.
 5. Click **Finish**. You will be redirected to the device details page where you can manage your e-paper display.
@@ -232,11 +232,11 @@ You will see a new image displayed on the display, showing that the device is co
 
 ## Using with Home Assistant
 
-Once you have integrated your OpenEPaperLink device with Home Assistant, you can create automations to dynamically update the display content based on sensor data, time, or other events.
+Once you have integrated your Open Display device with Home Assistant, you can create automations to dynamically update the display content based on sensor data, time, or other events.
 
 ### Automating Display Updates
 
-The primary service for updating the display is `open_epaper_link.drawcustom`. This service allows you to draw text, icons, images, and shapes on the display. For a full list of supported types and parameters, please refer to the [drawcustom documentation](https://github.com/OpenEPaperLink/Home_Assistant_Integration/blob/main/docs/drawcustom/supported_types.md).
+The primary service for updating the display is `open_epaper_link.drawcustom`. This service allows you to draw text, icons, images, and shapes on the display. For a full list of supported types and parameters, please refer to the [drawcustom documentation](https://github.com/OpenDisplay-org/Home_Assistant_Integration/blob/main/docs/drawcustom/supported_types.md).
 
 You can create automations in Home Assistant using either the **Visual Editor** or by writing **YAML** code directly. Below are examples of both methods.
 
@@ -248,7 +248,7 @@ You can create automations in Home Assistant using either the **Visual Editor** 
 <div style={{textAlign:'center'}}><img src={require('./add_trigger.png').default} style={{width:800, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src={require('./fill_trigger.png').default} style={{width:800, height:'auto'}}/></div>
 
-3.  Add an **Action** and select **OpenEPaperLink: Draw Custom Image**.
+3.  Add an **Action** and select **Open Display: Draw Custom Image**.
 
 <div style={{textAlign:'center'}}><img src={require('./add_action.png').default} style={{width:800, height:'auto'}}/></div>
 
@@ -356,11 +356,11 @@ actions:
 ```
 
 :::caution Important: Device ID
-The `device_id` shown in the example above (`2ad706d4aa7c657b6fe99a733cef2253`) is just an example. You **must** replace it with the actual Device ID of your own OpenEPaperLink display.
+The `device_id` shown in the example above (`2ad706d4aa7c657b6fe99a733cef2253`) is just an example. You **must** replace it with the actual Device ID of your own display.
 
 To find your Device ID:
 1. Create a new automation in Home Assistant using the Visual Editor.
-2. Select your OpenEPaperLink device in the action settings.
+2. Select your Open Display device in the action settings.
 3. Switch to **YAML mode** (click the three dots in the top-right corner of the action card).
 4. Copy the `device_id` from the YAML code and paste it into your automation.
 :::
@@ -398,7 +398,7 @@ If you are looking for a stylish way to mount your display, check out this 3D pr
 
 ### Bluetooth Connection Issues
 
-**Problem**: Cannot find OEPL device in Bluetooth pairing
+**Problem**: Cannot find Open display device in Bluetooth pairing
 - **Solution**:
   - Ensure device is powered on and firmware is installed
   - Move closer to the device (within 2-3 meters)
@@ -429,13 +429,12 @@ If you are looking for a stylish way to mount your display, check out this 3D pr
 
 ## Resources
 
-- **[GitHub]** [OEPL_BLE Firmware Repository](https://github.com/OpenEPaperLink/OEPL_BLE)
-- **[Web Tool]** [Firmware Web Installer](https://openepaperlink.org/ble/install/)
-- **[Web Tool]** [Configuration Builder](https://openepaperlink.org/ble/config/)
-- **[Web Tool]** [Display Tester](https://openepaperlink.org/ble/display/)
-- **[Discord]** [OpenEPaperLink Community](https://discord.gg/fekcBc5RN5)
-- **[Website]** [OpenEPaperLink Official Site](https://openepaperlink.de/)
-- **[Documentation]** [OpenEPaperLink Wiki](https://github.com/OpenEPaperLink/OpenEPaperLink/wiki)
+- **[GitHub]** [Open Display Firmware Repository](https://github.com/OpenDisplay-org/firmware)
+- **[Web Tool]** [Firmware Web Installer](https://opendisplay.org/firmware/install/)
+- **[Web Tool]** [Configuration Builder](https://opendisplay.org/firmware/config/)
+- **[Web Tool]** [Display Tester](https://opendisplay.org/firmware/ble/display/)
+- **[Discord]** [Open Display Community](https://discord.gg/XmTHz8RfJE)
+- **[Website]** [Open Display Official Site](https://opendisplay.org/)
 
 
 
