@@ -75,6 +75,10 @@ The Open Display firmware offers several advantages for custom e-paper display p
 
 ### Hardware Assembly
 
+:::tip
+For a list of compatible displays, please check the [Seeed Display Compatibility Guide](https://opendisplay.org/firmware/seeed_display_compatibility.html).
+:::
+
 **Step 1. Connect Display to Driver Board**  
 Align the FPC cable with the connector on the XIAO EN04 Board, then secure the latch to ensure a firm connection.  
 
