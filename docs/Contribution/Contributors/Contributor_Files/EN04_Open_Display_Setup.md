@@ -133,7 +133,7 @@ If the installation fails, try:
 Open the [Open Display Configuration Page](https://opendisplay.org/firmware/config/?config=nrf52840-en04-s6) and connect to your board.
 
 
-<div style={{textAlign:'center'}}><img src={require('./03.png').default} style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./03.jpg').default} style={{width:600, height:'auto'}}/></div>
 
 
 If you selected **"Seeed EN04 4.26"** or **"Seeed EN04 7.3"**, you will see **"Auto Install to Device"**.
@@ -142,7 +142,7 @@ This is the easiest way to configure your DIY Kit.
 **Step 7. Connect to the Board**
 Press the **"Connect"** button on the page. You should see a window showing available Open Display devices, select the new device and press **"Pair"**
 
-<div style={{textAlign:'center'}}><img src={require('./04.png').default}  style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./04.jpg').default}  style={{width:500, height:'auto'}}/></div>
 
 
 **Step 8. Save the configuration to the Board**  
@@ -172,7 +172,7 @@ Click **"Connect"** and select your Open Display device from the Bluetooth pairi
 Click **"Select Image"** and choose an image file from your computer.
 
 
-<div style={{textAlign:'center'}}><img src={require('./06.png').default} style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./06.jpg').default} style={{width:500, height:'auto'}}/></div>
 
 
 
@@ -251,16 +251,16 @@ You can create automations in Home Assistant using either the **Visual Editor** 
 1.  Go to **Settings > Automations & Scenes** and click **Create Automation**.
 2.  Add a **Time Pattern** trigger (e.g., every 10 minutes).
 
-<div style={{textAlign:'center'}}><img src={require('./08.png').default} style={{width:800, height:'auto'}}/></div>
-<div style={{textAlign:'center'}}><img src={require('./09.png').default} style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./08.jpg').default} style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./09.jpg').default} style={{width:800, height:'auto'}}/></div>
 
 3.  Add an **Action** and select **Open Display: Draw Custom Image**.
 
-<div style={{textAlign:'center'}}><img src={require('./10.png').default} style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./10.jpg').default} style={{width:800, height:'auto'}}/></div>
 
 4.  Select your target device.
 
-<div style={{textAlign:'center'}}><img src={require('./11.png').default} style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src={require('./11.jpg').default} style={{width:800, height:'auto'}}/></div>
 
 5.  In the **Payload** field, enter the configuration for your display elements.
 
