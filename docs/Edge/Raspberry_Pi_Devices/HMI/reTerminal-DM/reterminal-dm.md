@@ -6,9 +6,10 @@ keywords:
   - reTerminal-DM
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reterminal-dm
+sku: 114070201,114070221,E23010420,114070262
 last_update:
-  date: 04/23/2023
-  author: Peter Pan
+  date: 12/15/2025
+  author: David Du
 ---
 # reTerminal DM Getting Started
 
@@ -36,7 +37,7 @@ It is equipped with rich scalability and hybrid connectivity, supporting CAN bus
 - Rugged design for harsh working environment: IP65 front panel, -10~50°C operating temperature
 - Hybrid connectivity: Support 4G LTE, LoRaWAN®, WiFi, BLE, RS485/RS232, CAN bus, 1000M Ethernet, USB, HDMI
 - Open-source design in software and hardware: Powered by Raspberry Pi CM4, welcome customization or derivatives
-- [Product warranty: Two-year warranty](Edge/Raspberry_Pi_Devices/HMI/reTerminal-DM/reterminal-dm-warranty.md)
+- [Product warranty: Two-year warranty](/reterminal-dm-warranty)
 
 > \*4G and LoRa® modules does not come with reTerminal DM by default, please purchase the relevant modules accordingly.
 
@@ -1315,7 +1316,7 @@ cd ~/sx1302_hal/packet_forwarder
 vim reset_lgw.sh
 ```
 
-Modify the reset_lgw.sh script with VIM as following:
+Modify the reset_lgw.sh script with text editor as following:
 
 ```sh
 #!/bin/bash
@@ -1397,7 +1398,8 @@ sed -i 's/spidev0.0/spidev0.1/g'  global_conf.json.sx1250.US915
 
 **Step 6.** Start LoraWAN® Module
 
-Then run the following code to start LoraWAN® Module according to your WM1302 operation frequence version.
+Choose your prefered LoRaWAN Network Server `server_address` and the gateway EUI `gateway_ID` in the corresponding `global_conf.json.sx1250.xxxxx` based on the module you are using, and modify the `up/down port` to `1700`. Then run the following code to start the concentrator:
+
 
 ```sh
 cd ~/sx1302_hal/packet_forwarder
@@ -1405,19 +1407,11 @@ cd ~/sx1302_hal/packet_forwarder
 # for WM1302 LoRaWAN Gateway Module (SPI) - EU868
 ./lora_pkt_fwd -c global_conf.json.sx1250.EU868
 
-# for WM1302 LoRaWAN Gateway Module (USB) - EU868
-./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
-
 # for WM1302 LoRaWAN Gateway Module (SPI) - US915
 ./lora_pkt_fwd -c global_conf.json.sx1250.US915
-
-# for WM1302 LoRaWAN Gateway Module (USB) - US915
-./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
 ```
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/wm1302-spi.png"/></div>
-
-Plese choose your prefered Lora® Network server `server_address` and the EUI `gateway_ID` in the corresponding `global_conf.json.sx1250.xxxxx` and modify the `up/down port` to `1700` to start the concentrator.
 
 
 
@@ -1501,17 +1495,22 @@ Please refer to the steps shown in the image below:
 
 **Step 6.** Start LoraWAN® Module
 
-Then run the following code to start LoraWAN® Module according to your WM1302 operation frequence version.
+Choose your prefered LoRaWAN Network Server `server_address` and the gateway EUI `gateway_ID` in the corresponding `global_conf.json.sx1250.xxxxx` based on the module you are using, and modify the `up/down port` to `1700`. Then run the following code to start the concentrator:
+
 
 ```sh
-USB version
-$ cd ~/sx1302_hal/packet_forwarder
-$ ./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
+cd ~/sx1302_hal/packet_forwarder
+
+# Please select one of the following comands based on your module
+
+# for WM1302 LoRaWAN Gateway Module (USB) - EU868
+./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
+
+# for WM1302 LoRaWAN Gateway Module (USB) - US915
+./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
 ```
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/wm1302-usb.png"/></div>
-
-Plese choose your prefered Lora® Network server and use the `EUI ID` as shown in the picture above to setup the connections.
 
 </TabItem>
 </Tabs>

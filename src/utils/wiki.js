@@ -1,122 +1,119 @@
 const docList = [
   [
     {
-      "path": "/esphome_xiao_w5500_ethernet_adapter",
-      "image": "https://files.seeedstudio.com/wiki/xiao_w5500_poe/0.webp",
-      "title": "ESPHome on XIAO(ESP32-S3) W5500 Ethernet Adapter for Home Assistant",
-      "date": "12/08/2025",
-      "title_cn": "在 XIAO(ESP32-S3) W5500 以太网适配器上使用 ESPHome 连接 Home Assistant",
-      "title_ja": "Home Assistant 用 ESPHome on XIAO(ESP32-S3) W5500 Ethernet Adapter",
-      "title_es": "ESPHome en XIAO(ESP32-S3) W5500 Adaptador Ethernet para Home Assistant"
+      "path": "/deploy_depth_anything_v3_jetson_agx_orin",
+      "image": "https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/da3_head.webp",
+      "title": "Deploy Depth Anything V3 on Jetson AGX Orin",
+      "date": "2026-01-09T00:00:00.000Z",
+      "title_cn": "在 Jetson AGX Orin 上部署 Depth Anything V3",
+      "title_ja": "Jetson AGX Orin上でDepth Anything V3をデプロイ",
+      "title_es": "Desplegar Depth Anything V3 en Jetson AGX Orin"
     },
+    {
+      "path": "/t1000e_for_lorawan_introduction",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/intro-e.webp",
+      "title": "T1000-E for LoRaWAN Introduction",
+      "date": "1/9/2026",
+      "title_cn": "T1000-E for LoRaWAN 介绍",
+      "title_ja": "T1000-E for LoRaWAN 紹介",
+      "title_es": "Introducción al T1000-E para LoRaWAN"
+    }
+  ],
+  [
+    {
+      "path": "/reachymini_getting_started",
+      "image": "https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/Reachy-mini-wake-up-companion.webp",
+      "title": "ReachyMini Getting Started",
+      "date": "1/7/2026"
+    },
+    {
+      "path": "/sensecraft-ai/tutorials/workspace/abnormal-vibration-detection",
+      "image": "https://files.seeedstudio.com/wiki/SenseCraft/SenseCraft_AI/Intro_image_title.webp",
+      "title": "Vibration Anomaly Detection",
+      "date": "01/06/2026",
+      "title_cn": "振动异常检测",
+      "title_ja": "振動異常検出",
+      "title_es": "Detección de Anomalías de Vibración"
+    }
+  ],
+  [
+    {
+      "path": "/local_voice_llm_on_recomputer_jetson_for_reachy_mini",
+      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/reachy_mini/world_frame.webp",
+      "title": "Deploy local voice LLM on reComputer Mini for Reachy Mini!",
+      "date": "01/06/2026",
+      "title_cn": "在 reComputer Mini 上为 Reachy Mini 部署本地语音 LLM！",
+      "title_ja": "Reachy Mini用reComputer Miniにローカル音声LLMをデプロイ！",
+      "title_es": "¡Despliega LLM de voz local en reComputer Mini para Reachy Mini!"
+    },
+    {
+      "path": "/fine_tune_gr00t_n1.6_for_lerobot_so_arm_and_deploy_on_agx_orin",
+      "image": "https://files.seeedstudio.com/wiki/other/cover1.png",
+      "title": "🤖 Fine-tune GR00T N1.6 for LeRobot SO-101 Arm and Deploy on AGX Orin",
+      "date": "2026-1-6",
+      "title_cn": "🤖 为 LeRobot SO-101 机械臂微调 GR00T N1.6 并在 AGX Orin 上部署",
+      "title_ja": "🤖 LeRobot SO-101 アーム用 GR00T N1.6 のファインチューニングと AGX Orin でのデプロイ",
+      "title_es": "🤖 Ajustar GR00T N1.6 para el Brazo LeRobot SO-101 y Desplegar en AGX Orin"
+    }
+  ],
+  [
+    {
+      "path": "/xiao_esp32c5_buletooth_usage",
+      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp",
+      "title": "Buletooth usage with Seeed Studio XIAO ESP32-C5",
+      "date": "01/06/2026",
+      "title_cn": "Seeed Studio XIAO ESP32-C5 的蓝牙使用",
+      "title_ja": "Seeed Studio XIAO ESP32-C5 での Bluetooth 使用方法",
+      "title_es": "Uso de Bluetooth con Seeed Studio XIAO ESP32-C5"
+    },
+    {
+      "path": "/XIAO_ESP32S3_GPIO_Viewer",
+      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32S3_GPIO_Viewer/gpio_viewer_10.webp",
+      "title": "XIAO ESP32-S3 (Sense) GPIO Viewer",
+      "date": "01/06/2026",
+      "title_cn": "XIAO ESP32-S3 (Sense) GPIO 查看器",
+      "title_ja": "XIAO ESP32-S3 (Sense) GPIO ビューア",
+      "title_es": "Visor GPIO del XIAO ESP32-S3 (Sense)"
+    }
+  ],
+  [
     {
       "path": "/Get_Started_with_SenseCAP_T2000_tracker",
       "image": "https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_QuickStart.webp",
       "title": "Get Started with SenseCAP T2000 Tracker",
-      "date": "12/8/2025",
+      "date": "1/5/2026",
       "title_cn": "SenseCAP T2000 Tracker 入门指南",
       "title_ja": "SenseCAP T2000 Tracker の使用開始",
-      "title_es": "Comenzar con el SenseCAP T2000 Tracker"
+      "title_es": "Comenzar con SenseCAP T2000 Tracker"
+    },
+    {
+      "path": "/semtech_lr2021_evk_getting_started",
+      "image": "https://files.seeedstudio.com/wiki/Semtech_LR2021_EVK/image/Semtech-LR2021-LoRa-Plus-Evaluation-Kit.webp",
+      "title": "Semtech LR2021 LoRa Plus™ Evaluation Kit",
+      "date": "12/30/2025",
+      "title_cn": "Semtech LR2021 LoRa Plus™ 评估套件",
+      "title_ja": "Semtech LR2021 LoRa Plus™ 評価キット",
+      "title_es": "Kit de Evaluación Semtech LR2021 LoRa Plus™"
     }
   ],
   [
     {
-      "path": "/viseron_on_recomputer",
-      "image": "https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/viseron/run.webp",
-      "title": "Viseron on reComputer",
-      "date": "12/07/2025",
-      "title_cn": "reComputer 上的 Viseron",
-      "title_ja": "reComputer上のViseron",
-      "title_es": "Viseron en reComputer"
+      "path": "/xiao_esp32c5_pin_multiplexing",
+      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp",
+      "title": "Pin Multiplexing with Seeed Studio XIAO ESP32-C5",
+      "date": "12/30/2025",
+      "title_cn": "Seeed Studio XIAO ESP32-C5 引脚复用",
+      "title_ja": "Seeed Studio XIAO ESP32-C5でのピン多重化",
+      "title_es": "Multiplexación de Pines con Seeed Studio XIAO ESP32-C5"
     },
     {
-      "path": "/mcp_external_system_integration",
-      "image": "https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.webp",
-      "title": "Bring Voice AI to Your Business System (MCP)",
-      "date": "12/06/2025",
-      "title_cn": "为您的业务系统带来语音 AI（MCP）",
-      "title_ja": "ビジネスシステムに音声 AI を導入する（MCP）",
-      "title_es": "Lleva la IA de Voz a tu Sistema Empresarial (MCP)"
-    }
-  ],
-  [
-    {
-      "path": "/deploy_ota_on_recomputer",
-      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.webp",
-      "title": "Deploy OTA on reComputer",
-      "date": "12/05/2025",
-      "title_cn": "在 reComputer 上部署 OTA",
-      "title_ja": "reComputerでOTAをデプロイ",
-      "title_es": "Desplegar OTA en reComputer"
-    },
-    {
-      "path": "/solutions/smart-retail-voice-ai-solution-1",
-      "image": "https://files.seeedstudio.com/wiki/solution/ai-sound/respeaker-rerouter-in-smart-retail.webp",
-      "title": "Smart Retail Voice AI",
-      "date": "12/04/2025",
-      "title_cn": "智能零售语音 AI",
-      "title_ja": "スマートリテール音声AI",
-      "title_es": "IA de Voz para Retail Inteligente"
-    }
-  ],
-  [
-    {
-      "path": "/use_the_motion-sensing_function_of_recamera_to_play_games",
-      "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_title.gif",
-      "title": "Play Subway Surfers with body sensor control",
-      "date": "11/27/2025",
-      "title_cn": "使用体感传感器来玩《Subway Surfers》",
-      "title_ja": "体感センサー操作で Subway Surfers をプレイ",
-      "title_es": "Juega a Subway Surfers con control por sensor corporal"
-    },
-    {
-      "path": "/getting_started_with_cob_led_dirver_board",
-      "image": "https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/first_COB-LED-Driver-Board-for-Seeed-Studio-XIAO.webp",
-      "title": "Getting Started with COB LED Driver Board for Seeed Studio XIAO",
-      "date": "11/27/2025",
-      "title_cn": "Seeed Studio XIAO COB LED 驱动板入门指南",
-      "title_ja": "Seeed Studio XIAO用COB LEDドライバーボード入門ガイド",
-      "title_es": "Introducción a la Placa Controladora de LED COB para Seeed Studio XIAO"
-    }
-  ],
-  [
-    {
-      "path": "/stackforce_series",
-      "image": "https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/6010_homepage.webp",
-      "title": "Stackforce X Series Motors Getting Start",
-      "date": "11/26/2025",
-      "title_cn": "Stackforce系列电机入门指南",
-      "title_ja": "Stackforce X 系列モーター入門ガイド",
-      "title_es": "Introducción a los Motores de la Serie Stackforce X"
-    },
-    {
-      "path": "/setting_ai_with_a1102",
-      "image": "https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/20.webp",
-      "title": "Setting AI Models on SenseCAP A1102 Using SenseCraft APP",
-      "date": "11/26/2025",
-      "title_cn": "使用 SenseCraft APP 在 SenseCAP A1102 上设置 AI 模型",
-      "title_ja": "SenseCraft APP を使用した SenseCAP A1102 での AI モデル設定",
-      "title_es": "Configuración de Modelos de IA en SenseCAP A1102 Usando la APP SenseCraft"
-    }
-  ],
-  [
-    {
-      "path": "/rm520n_module_for_jetson",
-      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/5G/RM520N.webp",
-      "title": "Quectel RM520N Module for Jetson",
-      "date": "11/25/2025",
-      "title_cn": "适用于 Jetson 的 Quectel RM520N 模块",
-      "title_ja": "Jetson用Quectel RM520Nモジュール",
-      "title_es": "Módulo Quectel RM520N para Jetson"
-    },
-    {
-      "path": "/fashionstar_servo",
-      "image": "https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/fashionstar_servo_all_homepage.webp",
-      "title": "FashionStar Servo Motors Documents Hub",
-      "date": "11/24/2025",
-      "title_cn": "华馨京舵机文档中心",
-      "title_ja": "FashionStarサーボモータードキュメントハブ",
-      "title_es": "Centro de Documentos de Motores Servo FashionStar"
+      "path": "/deploy_live_vlm_webui_on_jetson",
+      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/gpt_oss/gptoss-running-live.webp",
+      "title": "Deploy Live VLM WebUI on reComputer Jetson",
+      "date": "12/26/2025",
+      "title_cn": "在 reComputer Jetson 上部署 Live VLM WebUI",
+      "title_ja": "reComputer Jetson に Live VLM WebUI をデプロイする",
+      "title_es": "Implementar Live VLM WebUI en reComputer Jetson"
     }
   ]
 ];

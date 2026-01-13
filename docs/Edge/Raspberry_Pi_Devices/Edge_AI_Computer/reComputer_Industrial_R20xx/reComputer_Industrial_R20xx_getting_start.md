@@ -8,6 +8,7 @@ keywords:
 - reComputer Industrial R20xx
 image: https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/recomputer-industrail-r2000.webp
 slug: /recomputer_industrial_r20xx_getting_start
+sku: 100020831,100045506,100080766,100026042,E2025091901
 last_update:
   date: 09/28/2025
   author: Nolan Chen
@@ -805,12 +806,12 @@ Schematic diagram of a single DO wires is as follws:
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.7_boot_switch_1.png" style={{width:100, height:'auto'}}/></div>
 
-The Boot Switch of the reComputer Industrial R2000 is connected to the nRPI_BOOT pin of CM5. This switch provides users with the option to select the boot source between eMMC and USB. In normal mode, the switch should be set away from the side with the "BOOT" label, enabling the system to boot from eMMC. Conversely, when users need to flash the system image, they should set the switch towards the "BOOT" label, allowing the system to boot from the Type-C USB interface.
+The Boot Switch of the reComputer Industrial R20xx is connected to the nRPI_BOOT pin of CM5. This switch provides users with the option to select the boot source between eMMC and USB. In normal mode, the switch should be set away from the side with the "BOOT" label, enabling the system to boot from eMMC. Conversely, when users need to flash the system image, they should set the switch towards the "BOOT" label, allowing the system to boot from the Type-C USB interface.
 
 | Switch Position | Mode         | Description      | nRPI-BOOT |
 |----------------|--------------|-----------------|-----------|
-|      <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/LOW.png" alt="image" width="80"/>            | Normal mode  | Boot from eMMC   | Low       |
-|     <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/HIGH.png" alt="image" width="80"/>             | Flash mode   | Boot from USB    | High      |
+|      <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/HIGH.png" alt="image" width="80"/>            | Normal mode  | Boot from eMMC   | Low       |
+|     <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/LOW.png" alt="image" width="80"/>             | Flash mode   | Boot from USB    | High      |
 
 ### USB
 

@@ -10,6 +10,7 @@ tags:
   - Hardware
 image: https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg
 slug: /recomputer_j501_mini_getting_started
+sku: 100020039
 last_update:
   date: 11/04/2025
   author: Dayu
@@ -251,13 +252,13 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
       <td> AGX Orin 64GB</td>
       <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDxBYYGqIfaSZqJT3uPt0alAa47BjjqCGvXWhD5tBsKx1M?e=3SW4Jf">Download</a></td>
-      <td>c63d1219531245abecc7bbdcafc73d3<br />4f75547454c7af85de40f08396a87e5ee  </td>
+      <td>f0efee5f265dbaef49dc14d517b269e<br />7f6582ff9977d9193d377966f36408ec3  </td>
     </tr>
     <tr>
       <td>AGX Orin 32GB</td>
       <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBohA1Z3GuSSJ7tFOQU8v22AYu8NNk9AS-1Cne78jOnSHw?e=dejuH9">Download</a></td>
-      <td>5d1f3cd28eb44ca60132c87ccce5aca<br />f806ee945b486df9061a34de73fbb582b </td>
+      <td>0a97cbb6d708776bd97608594c60c3<br />4208b5d5dc6efbfc5553edd9c5a95802f6 </td>
     </tr>
   </tbody>
 </table>
@@ -292,7 +293,7 @@ Before we can move on to the installation steps, we need to make sure that the b
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/reset.png" />
 </div>
 
-**Step 2.** Power up the carrier board by connecting the power cable, then release REST button .
+**Step 2.** Power up the carrier board by connecting the power cable, then release **REC** button .
 
 **Step 3.** Connect the board to the Ubuntu host PC with a USB Type-C data transmission cable.
 
@@ -445,7 +446,7 @@ Bluetooth functionality is available via the M.2 Key E slot.
 
 ## Ethernet
 
-The Robotics j501-Mini carrier board features 2 1Gbps RJ45 Ethernet ports for high-speed wired network connectivity.
+The Robotics j501-Mini carrier board features one 1Gbps and one 10Gbps RJ45 Ethernet ports for high-speed wired network connectivity.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/ethernet-real.png"/>
@@ -690,7 +691,7 @@ Create `test_can.sh` to test data transmission and reception between **CAN0** an
 ```bash
 touch test_can.sh
 chmod +x test_can.sh
-./tets_can.sh
+sudo ./tets_can.sh
 ```
 The script code for `test_can.sh` is as follows:
 
@@ -754,7 +755,7 @@ Create `test_canfd.sh` to test data transmission and reception between CAN0 and 
 ```bash
 touch test_canfd.sh
 chmod +x test_can.sh
-./tets_can.sh
+sudo ./tets_can.sh
 ```
 The script code for `test_canfdfd.sh` is as follows:
 
@@ -1332,19 +1333,19 @@ v4l2-ctl -V --set-fmt-video=width=3840,height=2160 -c sensor_mode=2  -d /dev/vid
 ```bash
 gst-launch-1.0 v4l2src device=/dev/video0 ! \
 'video/x-raw,width=1920,height=1080,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 
 gst-launch-1.0 v4l2src device=/dev/video1 ! \
 'video/x-raw,width=1920,height=1080,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 
 gst-launch-1.0 v4l2src device=/dev/video2 ! \
 'video/x-raw,width=1920,height=1536,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 
 gst-launch-1.0 v4l2src device=/dev/video3 ! \
 'video/x-raw,width=3840,height=2160,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 ```
 
 <div align="center">
@@ -1357,7 +1358,7 @@ The Robotics J501 Mini is equipped with an HDMI for high-resolution display outp
 
 ## Resources
 
-- [reComputer Robotics J501-Mini Carrier Board Schematic](https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/reComputer_mini_J501_datasheet.pdf)
+- [reComputer Robotics J501-Mini Carrier Board Schematic](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_J501_datasheet.pdf)
 
 <!-- - [reComputer Robotics J501-Mini Carrier Board Datasheet]() -->
 

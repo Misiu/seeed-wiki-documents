@@ -11,6 +11,17 @@
 
 // @ts-check
 
+const DOC_LANGS = process.env.DOC_LANGS || 'all';
+const isDev = process.env.NODE_ENV === 'development';
+
+/** @type {Record<string, string[]>} */
+const langToSidebarKeys = {
+  en: ['ProductSidebar'],
+  'zh-CN': ['CNSidebar'],
+  es: ['esSidebar'],
+  ja: ['jaSidebar'],
+};
+
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
@@ -729,6 +740,13 @@ const sidebars = {
                 'Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/Quick_Start',
               ],
             },
+            {
+              type: 'category',
+              label: 'Integrated with LoRaWAN Network Server',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/Connect_to_The_Things_Network'
+              ],
+            }
           ],
         },
         //       {
@@ -1267,6 +1285,47 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'XIAO ESP32C5',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/XIAO_ESP32C5_Getting_Started',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/XIAO_ESP32C5_Pin_Multiplexing',
+            {
+              type: 'category',
+              label: 'Programming Language',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/XIAO_ESP32C5_with_PlatformIO',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/XIAO_ESP32C5_with_MicroPython',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Application',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/XIAO_ESP32C5_ESP-Mesh_Audio',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/XIAO_ESP32C5_HomeAssistant',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Zigbee',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/XIAO_ESP32C5_Zigbee_idf',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/XIAO_ESP32C5_Zigbee_arduino',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/XIAO_ESP32C5_Zigbee_homeassistant',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Wireless Connection',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/XIAO_ESP32C5_WiFi_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/XIAO_ESP32C5_Buletooth_Usage',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'XIAO ESP32C6',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/XIAO_ESP32C6_Getting_Started',
@@ -1389,6 +1448,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_ESPHome',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_SSCMA',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Voice_Pomodoro',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_GPIO_Viewer',
               ],
             },
           ],
@@ -1908,6 +1968,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_edgeimpulse',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_tflm',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ros2',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_voice_agent',
                   ],
                 },
               ],
@@ -2477,6 +2538,7 @@ const sidebars = {
             'Sensor/IOT_Button_for_ESPHOME/getting_started_with_iot_button',
             'Sensor/IOT_Button_for_ESPHOME/SEEED_IOT_BOTTON_FOR_ESPHOME',
             'Sensor/IOT_Button_for_ESPHOME/seeed_iot_button_with_zigbee',
+            'Sensor/IOT_Button_for_ESPHOME/seeed_iot_button_with_seeed_discovery',
           ],
         },
         {
@@ -2611,6 +2673,13 @@ const sidebars = {
         id: 'Network/SenseCAP_Network/SenseCAP_Gateway_Intro',
       },
       items: [
+        {
+          type: 'category',
+          label: 'reComputer R1225 LoRaWAN Gateway',
+          items: [
+            'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_introduction',
+          ],
+        },
         {
           type: 'category',
           label: 'SenseCAP M2 Multi-Platform Gateway',
@@ -3430,6 +3499,7 @@ const sidebars = {
                     },
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/reTerminal-DM-Yolo5',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/yolov11_for_speed_estimation_and_loitering_detection_on_recomputer'
                   ]
                 },
                 {
@@ -3743,6 +3813,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/Efficient_Multi-Task_Vision_Inference_Engine_Deployment_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/deploy_frigate_on_jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/AI-NVR_with_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
               ]
             },
             // Generative AI
@@ -3764,6 +3835,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/How_to_run_VLM_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
                 // Projects
+                'Edge/NVIDIA_Jetson/Application/Generative_AI/Deploy_Live_VLM_WebUI_on_reComputer_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Deploy_Riva_and_Llama2_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Real_Time_Subtitle_Recoder_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Deploy_Ollama_and_AnythingLLM_on_Jetson',
@@ -3778,9 +3850,20 @@ const sidebars = {
               label: 'Multimodal AI',
               items: [
                 // Models
+                'Edge/NVIDIA_Jetson/Application/Multimodal_AI/Local_Voice_LLM_for_Reachy_Mini',
                 'Edge/NVIDIA_Jetson/Application/Multimodal_AI/Speech_vlm',
                 'Edge/NVIDIA_Jetson/Application/Multimodal_AI/use_vlm_guard_warehouse',
                 'Edge/NVIDIA_Jetson/Application/Multimodal_AI/Local_Chatbot_reComputer',
+                'Edge/NVIDIA_Jetson/Application/Multimodal_AI/llm_interface_control_jetson',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Physical AI',
+              items: [
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Local_Chatbot_reComputer',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
               ]
             },
             // Managed Services
@@ -3845,6 +3928,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'Edge/NVIDIA_Jetson/FAQs/Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/How_to_Establish_the_Ethercat_on_Jetson',
+            'Edge/NVIDIA_Jetson/FAQs/Make_DIY_BSP_for_Jetson',
           ]
         }
       ],
@@ -4077,6 +4161,7 @@ const sidebars = {
             'Robotics/Robot_Kits/Lerobot/Lerobot_Starai_Arm',
             'Robotics/Robot_Kits/Lerobot/Starai_Arm_ROS2_Moveit',
             'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm_New',
+            'Robotics/Robot_Kits/Lerobot/Lerobot_SO_ARM101_DAMO',
             //'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm',
             'Robotics/Robot_Kits/Lerobot/Lerobot_Lekiwi',
             'Robotics/Robot_Kits/Lerobot/Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',
@@ -4094,6 +4179,21 @@ const sidebars = {
           label: 'Hand',
           items: [
             'Robotics/Robot_Kits/Hand/AmazingHand',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'ReachyMini',
+          items: [
+            'Robotics/Robot_Kits/ReachyMini/ReachyMini_Getting_Started',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Stackforce',
+          items: [
+            'Robotics/Robot_Kits/StackForce/StackForce_Giant_Bipedal_Wheeled_Robot',
+            'Robotics/Robot_Kits/StackForce/StackForce_Mini_Wheeled_Legged_Robot',
           ]
         },
       ]
@@ -5857,6 +5957,13 @@ const sidebars = {
                 'zh-CN/Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/cn_Quick_Start',
               ],
             },
+            {
+              type: 'category',
+              label: '与 LoRaWAN 网络服务器集成',
+              items: [
+                'zh-CN/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/cn_Connect_to_The_Things_Network'
+              ],
+            }
           ],
         },
         //       {
@@ -6395,6 +6502,48 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'XIAO ESP32C5',
+          items: [
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/cn_XIAO_ESP32C5_Getting_Started',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/cn_XIAO_ESP32C5_Pin_Multiplexing',
+            {
+              type: 'category',
+              label: '编程语言',
+              items: [
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/cn_XIAO_ESP32C5_with_PlatformIO',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/cn_XIAO_ESP32C5_with_MicroPython',
+
+              ],
+            },
+            {
+              type: 'category',
+              label: '应用',
+              items: [
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/cn_XIAO_ESP32C5_ESP-Mesh_Audio',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/cn_XIAO_ESP32C5_HomeAssistant',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Zigbee',
+              items: [
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/cn_XIAO_ESP32C5_Zigbee_idf',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/cn_XIAO_ESP32C5_Zigbee_arduino',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/cn_XIAO_ESP32C5_Zigbee_homeassistant',
+              ],
+            },
+            {
+              type: 'category',
+              label: '无线连接',
+              items: [
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/cn_XIAO_ESP32C5_WiFi_Usage',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/cn_XIAO_ESP32C5_Buletooth_Usage',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'XIAO ESP32C6',
           items: [
             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/cn_XIAO_ESP32C6_Getting_Started',
@@ -6517,6 +6666,7 @@ const sidebars = {
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/cn_XIAO_ESP32S3_ESPHome',
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/cn_XIAO_ESP32S3_SSCMA',
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/cn_XIAO_ESP32S3_Voice_Pomodoro',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/cn_XIAO_ESP32S3_GPIO_Viewer',
               ],
             },
           ],
@@ -7035,6 +7185,7 @@ const sidebars = {
                     'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_edgeimpulse',
                     'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_tflm',
                     'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_ros2',
+                    'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_voice_agent',
                   ],
                 },
               ],
@@ -7604,6 +7755,7 @@ const sidebars = {
             'zh-CN/Sensor/IOT_Button_for_ESPHOME/cn_getting_started_with_iot_button',
             'zh-CN/Sensor/IOT_Button_for_ESPHOME/cn_SEEED_IOT_BOTTON_FOR_ESPHOME',
             'zh-CN/Sensor/IOT_Button_for_ESPHOME/cn_seeed_iot_button_with_zigbee',
+            'zh-CN/Sensor/IOT_Button_for_ESPHOME/cn_seeed_iot_button_with_seeed_discovery',
           ],
         },
         {
@@ -7738,6 +7890,13 @@ const sidebars = {
         id: 'zh-CN/Network/SenseCAP_Network/cn_SenseCAP_Gateway_Intro',
       },
       items: [
+        {
+          type: 'category',
+          label: 'reComputer R1225 LoRaWAN 网关',
+          items: [
+            'zh-CN/Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/cn_R1225_introduction',
+          ],
+        },
         {
           type: 'category',
           label: 'SenseCAP M2 多平台网关',
@@ -8557,6 +8716,7 @@ const sidebars = {
                     },
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/cn_reTerminal-DM-Yolo5',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/cn_yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/cn_yolov11_for_speed_estimation_and_loitering_detection_on_recomputer'
                   ]
                 },
                 {
@@ -8870,6 +9030,7 @@ const sidebars = {
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_Efficient_Multi-Task_Vision_Inference_Engine_Deployment_on_Jetson',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_deploy_frigate_on_jetson',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_AI-NVR_with_Jetson',
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
               ]
             },
             // Generative AI
@@ -8891,6 +9052,7 @@ const sidebars = {
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Generative_AI/cn_How_to_run_VLM_on_reComputer',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Generative_AI/cn_How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
                 // Projects
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Deploy_Live_VLM_WebUI_on_reComputer_Jetson',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Deploy_Riva_and_Llama2_on_reComputer',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Real_Time_Subtitle_Recoder_on_Jetson',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Deploy_Ollama_and_AnythingLLM_on_Jetson',
@@ -8905,9 +9067,20 @@ const sidebars = {
               label: '多模态 AI',
               items: [
                 // Models
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_Local_Voice_LLM_for_Reachy_Mini',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_Speech_vlm',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_use_vlm_guard_warehouse',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_Local_Chatbot_reComputer',
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_llm_interface_control_jetson',
+              ]
+            },
+            {
+              type: 'category',
+              label: '具身智能',
+              items: [
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Local_Chatbot_reComputer',
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
               ]
             },
             // Managed Services
@@ -8972,6 +9145,7 @@ const sidebars = {
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_How_to_Establish_the_Ethercat_on_Jetson',
+            'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Make_DIY_BSP_for_Jetson',
           ]
         }
       ],
@@ -9204,6 +9378,7 @@ const sidebars = {
             'zh-CN/Robotics/Robot_Kits/Lerobot/cn_Lerobot_Starai_Arm',
             'zh-CN/Robotics/Robot_Kits/Lerobot/cn_Starai_Arm_ROS2_Moveit',
             'zh-CN/Robotics/Robot_Kits/Lerobot/cn_Lerobot_SO100Arm_New',
+            'zh-CN/Robotics/Robot_Kits/Lerobot/cn_Lerobot_SO_ARM101_DAMO',
             //'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm',
             'zh-CN/Robotics/Robot_Kits/Lerobot/cn_Lerobot_Lekiwi',
             'zh-CN/Robotics/Robot_Kits/Lerobot/cn_Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',
@@ -10899,6 +11074,13 @@ const sidebars = {
                 'es/Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/es_Quick_Start',
               ],
             },
+            {
+              type: 'category',
+              label: 'Integrado con el servidor de red LoRaWAN',
+              items: [
+                'es/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/es_Connect_to_The_Things_Network'
+              ],
+            }
           ],
         },
         //       {
@@ -11437,6 +11619,48 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'XIAO ESP32C5',
+          items: [
+            'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/es_XIAO_ESP32C5_Getting_Started',
+            'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/es_XIAO_ESP32C5_Pin_Multiplexing',
+            {
+              type: 'category',
+              label: 'Lenguaje de Programación',
+              items: [
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/es_XIAO_ESP32C5_with_PlatformIO',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/es_XIAO_ESP32C5_with_MicroPython',
+
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Aplicación',
+              items: [
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/es_XIAO_ESP32C5_ESP-Mesh_Audio',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/es_XIAO_ESP32C5_HomeAssistant',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Zigbee',
+              items: [
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/es_XIAO_ESP32C5_Zigbee_idf',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/es_XIAO_ESP32C5_Zigbee_arduino',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/es_XIAO_ESP32C5_Zigbee_homeassistant',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Conexión Inalámbrica',
+              items: [
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/es_XIAO_ESP32C5_WiFi_Usage',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/es_XIAO_ESP32C5_Buletooth_Usage',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'XIAO ESP32C6',
           items: [
             'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/es_XIAO_ESP32C6_Getting_Started',
@@ -11559,6 +11783,7 @@ const sidebars = {
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/es_XIAO_ESP32S3_ESPHome',
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/es_XIAO_ESP32S3_SSCMA',
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/es_XIAO_ESP32S3_Voice_Pomodoro',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/es_XIAO_ESP32S3_GPIO_Viewer',
               ],
             },
           ],
@@ -12077,6 +12302,7 @@ const sidebars = {
                     'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_edgeimpulse',
                     'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_tflm',
                     'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_ros2',
+                    'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_voice_agent',
                   ],
                 },
               ],
@@ -12646,6 +12872,7 @@ const sidebars = {
             'es/Sensor/IOT_Button_for_ESPHOME/es_getting_started_with_iot_button',
             'es/Sensor/IOT_Button_for_ESPHOME/es_SEEED_IOT_BOTTON_FOR_ESPHOME',
             'es/Sensor/IOT_Button_for_ESPHOME/es_seeed_iot_button_with_zigbee',
+            'es/Sensor/IOT_Button_for_ESPHOME/es_seeed_iot_button_with_seeed_discovery',
           ],
         },
         {
@@ -12780,6 +13007,13 @@ const sidebars = {
         id: 'es/Network/SenseCAP_Network/es_SenseCAP_Gateway_Intro',
       },
       items: [
+        {
+          type: 'category',
+          label: 'Gateway LoRaWAN reComputer R1225',
+          items: [
+            'es/Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/es_R1225_introduction',
+          ],
+        },
         {
           type: 'category',
           label: 'Gateway Multi-Plataforma SenseCAP M2',
@@ -13599,6 +13833,7 @@ const sidebars = {
                     },
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/es_reTerminal-DM-Yolo5',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/es_yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/es_yolov11_for_speed_estimation_and_loitering_detection_on_recomputer'
                   ]
                 },
                 {
@@ -13912,6 +14147,7 @@ const sidebars = {
                 'es/Edge/NVIDIA_Jetson/Application/Computer_Vision/es_Efficient_Multi-Task_Vision_Inference_Engine_Deployment_on_Jetson',
                 'es/Edge/NVIDIA_Jetson/Application/Computer_Vision/es_deploy_frigate_on_jetson',
                 'es/Edge/NVIDIA_Jetson/Application/Computer_Vision/es_AI-NVR_with_Jetson',
+                'es/Edge/NVIDIA_Jetson/Application/Computer_Vision/es_Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
               ]
             },
             // Generative AI
@@ -13933,6 +14169,7 @@ const sidebars = {
                 'es/Edge/NVIDIA_Jetson/Application/Generative_AI/es_How_to_run_VLM_on_reComputer',
                 'es/Edge/NVIDIA_Jetson/Application/Generative_AI/es_How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
                 // Projects
+                'es/Edge/NVIDIA_Jetson/Application/Generative_AI/es_Deploy_Live_VLM_WebUI_on_reComputer_Jetson',
                 'es/Edge/NVIDIA_Jetson/Application/Generative_AI/es_Deploy_Riva_and_Llama2_on_reComputer',
                 'es/Edge/NVIDIA_Jetson/Application/Generative_AI/es_Real_Time_Subtitle_Recoder_on_Jetson',
                 'es/Edge/NVIDIA_Jetson/Application/Generative_AI/es_Deploy_Ollama_and_AnythingLLM_on_Jetson',
@@ -13947,9 +14184,20 @@ const sidebars = {
               label: 'IA Multimodal',
               items: [
                 // Models
+                'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_Local_Voice_LLM_for_Reachy_Mini',
                 'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_Speech_vlm',
                 'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_use_vlm_guard_warehouse',
                 'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_Local_Chatbot_reComputer',
+                'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_llm_interface_control_jetson',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'IA Encarnada',
+              items: [
+                'es/Edge/NVIDIA_Jetson/Application/Physical_AI/es_Local_Chatbot_reComputer',
+                'es/Edge/NVIDIA_Jetson/Application/Physical_AI/es_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
+                'es/Edge/NVIDIA_Jetson/Application/Physical_AI/es_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
               ]
             },
             // Managed Services
@@ -14014,6 +14262,7 @@ const sidebars = {
             'es/Edge/NVIDIA_Jetson/FAQs/es_Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'es/Edge/NVIDIA_Jetson/FAQs/es_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'es/Edge/NVIDIA_Jetson/FAQs/es_How_to_Establish_the_Ethercat_on_Jetson',
+            'es/Edge/NVIDIA_Jetson/FAQs/es_Make_DIY_BSP_for_Jetson',
           ]
         }
       ],
@@ -14246,6 +14495,7 @@ const sidebars = {
             'es/Robotics/Robot_Kits/Lerobot/es_Lerobot_Starai_Arm',
             'es/Robotics/Robot_Kits/Lerobot/es_Starai_Arm_ROS2_Moveit',
             'es/Robotics/Robot_Kits/Lerobot/es_Lerobot_SO100Arm_New',
+            'es/Robotics/Robot_Kits/Lerobot/es_Lerobot_SO_ARM101_DAMO',
             //'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm',
             'es/Robotics/Robot_Kits/Lerobot/es_Lerobot_Lekiwi',
             'es/Robotics/Robot_Kits/Lerobot/es_Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',
@@ -14263,6 +14513,14 @@ const sidebars = {
           label: 'Mano',
           items: [
             'es/Robotics/Robot_Kits/Hand/es_AmazingHand',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Stackforce',
+          items: [
+            'es/Robotics/Robot_Kits/StackForce/es_StackForce_Giant_Bipedal_Wheeled_Robot',
+            'es/Robotics/Robot_Kits/StackForce/es_StackForce_Mini_Wheeled_Legged_Robot',
           ]
         },
       ]
@@ -15934,6 +16192,13 @@ const sidebars = {
                 'ja/Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/ja_Quick_Start',
               ],
             },
+            {
+              type: 'category',
+              label: 'LoRaWAN ネットワークサーバーとの統合',
+              items: [
+                'ja/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/ja_Connect_to_The_Things_Network'
+              ],
+            }
           ],
         },
         //       {
@@ -16472,6 +16737,48 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'XIAO ESP32C5',
+          items: [
+            'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/ja_XIAO_ESP32C5_Getting_Started',
+            'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/ja_XIAO_ESP32C5_Pin_Multiplexing',
+            {
+              type: 'category',
+              label: 'プログラミング言語',
+              items: [
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/ja_XIAO_ESP32C5_with_PlatformIO',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/ja_XIAO_ESP32C5_with_MicroPython',
+
+              ],
+            },
+            {
+              type: 'category',
+              label: 'アプリケーション',
+              items: [
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/ja_XIAO_ESP32C5_ESP-Mesh_Audio',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/ja_XIAO_ESP32C5_HomeAssistant',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Zigbee',
+              items: [
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/ja_XIAO_ESP32C5_Zigbee_idf',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/ja_XIAO_ESP32C5_Zigbee_arduino',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/ja_XIAO_ESP32C5_Zigbee_homeassistant',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'ワイヤレス接続',
+              items: [
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/ja_XIAO_ESP32C5_WiFi_Usage',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/ja_XIAO_ESP32C5_Buletooth_Usage',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'XIAO ESP32C6',
           items: [
             'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/ja_XIAO_ESP32C6_Getting_Started',
@@ -16594,6 +16901,7 @@ const sidebars = {
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/ja_XIAO_ESP32S3_ESPHome',
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/ja_XIAO_ESP32S3_SSCMA',
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/ja_XIAO_ESP32S3_Voice_Pomodoro',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/ja_XIAO_ESP32S3_GPIO_Viewer',
               ],
             },
           ],
@@ -17112,6 +17420,7 @@ const sidebars = {
                     'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_edgeimpulse',
                     'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_tflm',
                     'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_ros2',
+                    'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_voice_agent',
                   ],
                 },
               ],
@@ -17681,6 +17990,7 @@ const sidebars = {
             'ja/Sensor/IOT_Button_for_ESPHOME/ja_getting_started_with_iot_button',
             'ja/Sensor/IOT_Button_for_ESPHOME/ja_SEEED_IOT_BOTTON_FOR_ESPHOME',
             'ja/Sensor/IOT_Button_for_ESPHOME/ja_seeed_iot_button_with_zigbee',
+            'ja/Sensor/IOT_Button_for_ESPHOME/ja_seeed_iot_button_with_seeed_discovery',
           ],
         },
         {
@@ -17815,6 +18125,13 @@ const sidebars = {
         id: 'ja/Network/SenseCAP_Network/ja_SenseCAP_Gateway_Intro',
       },
       items: [
+        {
+          type: 'category',
+          label: 'reComputer R1225 LoRaWAN Gateway',
+          items: [
+            'ja/Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/ja_R1225_introduction',
+          ],
+        },
         {
           type: 'category',
           label: 'SenseCAP M2 Multi-Platform Gateway',
@@ -18634,6 +18951,7 @@ const sidebars = {
                     },
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/ja_reTerminal-DM-Yolo5',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/ja_yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/ja_yolov11_for_speed_estimation_and_loitering_detection_on_recomputer'
                   ]
                 },
                 {
@@ -18947,6 +19265,7 @@ const sidebars = {
                 'ja/Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Efficient_Multi-Task_Vision_Inference_Engine_Deployment_on_Jetson',
                 'ja/Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_deploy_frigate_on_jetson',
                 'ja/Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_AI-NVR_with_Jetson',
+                'ja/Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
               ]
             },
             // Generative AI
@@ -18968,6 +19287,7 @@ const sidebars = {
                 'ja/Edge/NVIDIA_Jetson/Application/Generative_AI/ja_How_to_run_VLM_on_reComputer',
                 'ja/Edge/NVIDIA_Jetson/Application/Generative_AI/ja_How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
                 // Projects
+                'ja/Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Deploy_Live_VLM_WebUI_on_reComputer_Jetson',
                 'ja/Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Deploy_Riva_and_Llama2_on_reComputer',
                 'ja/Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Real_Time_Subtitle_Recoder_on_Jetson',
                 'ja/Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Deploy_Ollama_and_AnythingLLM_on_Jetson',
@@ -18982,9 +19302,20 @@ const sidebars = {
               label: 'マルチモーダル AI',
               items: [
                 // Models
+                'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Local_Voice_LLM_for_Reachy_Mini',
                 'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Speech_vlm',
                 'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_use_vlm_guard_warehouse',
                 'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Local_Chatbot_reComputer',
+                'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_llm_interface_control_jetson',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'エンボディド AI',
+              items: [
+                'ja/Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Local_Chatbot_reComputer',
+                'ja/Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
+                'ja/Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
               ]
             },
             // Managed Services
@@ -19049,6 +19380,7 @@ const sidebars = {
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_How_to_Establish_the_Ethercat_on_Jetson',
+            'ja/Edge/NVIDIA_Jetson/FAQs/ja_Make_DIY_BSP_for_Jetson',
           ]
         }
       ],
@@ -19281,6 +19613,7 @@ const sidebars = {
             'ja/Robotics/Robot_Kits/Lerobot/ja_Lerobot_Starai_Arm',
             'ja/Robotics/Robot_Kits/Lerobot/ja_Starai_Arm_ROS2_Moveit',
             'ja/Robotics/Robot_Kits/Lerobot/ja_Lerobot_SO100Arm_New',
+            'ja/Robotics/Robot_Kits/Lerobot/ja_Lerobot_SO_ARM101_DAMO',
             //'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm',
             'ja/Robotics/Robot_Kits/Lerobot/ja_Lerobot_Lekiwi',
             'ja/Robotics/Robot_Kits/Lerobot/ja_Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',
@@ -19298,6 +19631,14 @@ const sidebars = {
           label: 'ハンド',
           items: [
             'ja/Robotics/Robot_Kits/Hand/ja_AmazingHand',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Stackforce',
+          items: [
+            'ja/Robotics/Robot_Kits/StackForce/ja_StackForce_Giant_Bipedal_Wheeled_Robot',
+            'ja/Robotics/Robot_Kits/StackForce/ja_StackForce_Mini_Wheeled_Legged_Robot',
           ]
         },
       ]
@@ -20265,4 +20606,60 @@ const sidebars = {
   ]
 };
 
-module.exports = sidebars;
+/**
+ * @param {{[key: string]: unknown}} allSidebars
+ */
+function filterSidebarsByLang(allSidebars) {
+  // 生产环境或未指定 DOC_LANGS：保持原样，导出全部 sidebar
+  if (!isDev || DOC_LANGS === 'all') {
+    return allSidebars;
+  }
+
+  const activeLangs = DOC_LANGS.split(',').map(
+    /** @param {string} l */
+    function (l) {
+      return l.trim();
+    }
+  ).filter(
+    /** @param {string} l */
+    function (l) {
+      return l;
+    }
+  );
+
+  const keepKeys = new Set();
+  activeLangs.forEach(
+    /** @param {string} lang */
+    function (lang) {
+      const keys = langToSidebarKeys[lang];
+      if (keys) {
+        keys.forEach(
+          /** @param {string} k */
+          function (k) {
+            keepKeys.add(k);
+          }
+        );
+      }
+    }
+  );
+
+  // 如果没匹配到任何语言，避免 dev 直接挂掉，就退回全部
+  if (keepKeys.size === 0) {
+    return allSidebars;
+  }
+
+  /** @type {{[key: string]: unknown}} */
+  const filtered = {};
+  Object.keys(allSidebars).forEach(
+    /** @param {string} key */
+    function (key) {
+      if (keepKeys.has(key)) {
+        filtered[key] = allSidebars[key];
+      }
+    }
+  );
+
+  return filtered;
+}
+
+module.exports = filterSidebarsByLang(sidebars);

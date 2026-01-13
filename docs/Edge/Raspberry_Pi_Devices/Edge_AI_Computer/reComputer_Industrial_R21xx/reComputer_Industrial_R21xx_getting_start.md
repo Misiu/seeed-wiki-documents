@@ -6,14 +6,15 @@ keywords:
 - Raspberry pi
 - Edge Controller
 - reComputer Industrial R21xx
-image: https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/recomputer-industrail-r2100.webp
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /recomputer_industrial_R21xx_getting_start
+sku: 100099044,100061305,100091962,100097052,E2025091902
 last_update:
   date: 09/28/2025
   author: Nolan Chen
 ---
 
-<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
@@ -624,7 +625,7 @@ Schematic diagram of RS232 wires is as follws:
 
 ### DI (Digital Input)
 
-The reComputer Industrial R2000 series equipment includes 8x DI ports, 3-Pin 3.5mm spacing phoenix terminals.
+The reComputer Industrial R2000 series equipment includes 4x DI ports, 3-Pin 3.5mm spacing phoenix terminals.
  The silkscreen of single DI is "DI/G_DI".
 
 **Pin Definition**
@@ -701,7 +702,7 @@ Schematic diagram of a single DI wires is as follws:
 
 ### DO (Digital Output)
 
-The reComputer Industrial R2000 series equipment includes 8x DO ports, 3-Pin 3.5mm spacing phoenix terminals.
+The reComputer Industrial R2000 series equipment includes 4x DO ports, 3-Pin 3.5mm spacing phoenix terminals.
 The silkscreen of single DO is "DO/G_DO".
 **Pin Definition**
 Terminal pins are defined as follows:
@@ -829,8 +830,8 @@ The Boot Switch of the reComputer Industrial R2000 is connected to the nRPI_BOOT
 
 | Switch Position | Mode         | Description      | nRPI-BOOT |
 |----------------|--------------|-----------------|-----------|
-|      <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/LOW.png" alt="image" width="80"/>            | Normal mode  | Boot from eMMC   | Low       |
-|     <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/HIGH.png" alt="image" width="80"/>             | Flash mode   | Boot from USB    | High      |
+|      <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/HIGH.png" alt="image" width="80"/>            | Normal mode  | Boot from eMMC   | Low       |
+|     <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/LOW.png" alt="image" width="80"/>             | Flash mode   | Boot from USB    | High      |
 
 ### USB
 

@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-12-10 10:01:33 (北京时间)
-// 多语言页面: 2075 个
+// 生成时间: 2026-01-13 09:58:49 (北京时间)
+// 多语言页面: 2112 个
 
 (function() {
   'use strict';
@@ -533,6 +533,12 @@
     "es",
     "ja"
   ],
+  "/deploy_depth_anything_v3_jetson_agx_orin": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/deploy_frigate_on_jetson": [
     "cn",
     "en",
@@ -731,6 +737,12 @@
     "es",
     "ja"
   ],
+  "/deploy_live_vlm_webui_on_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/local_ai_ssistant": [
     "cn",
     "en",
@@ -839,7 +851,19 @@
     "es",
     "ja"
   ],
+  "/llm_interface_control_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/local_chatbot_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/local_voice_llm_on_recomputer_jetson_for_reachy_mini": [
     "cn",
     "en",
     "es",
@@ -852,6 +876,24 @@
     "ja"
   ],
   "/vlm": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor_bk": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/fine_tune_gr00t_n1.6_for_lerobot_so_arm_and_deploy_on_agx_orin": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/local_chatbot_recomputer_bk": [
     "cn",
     "en",
     "es",
@@ -995,6 +1037,12 @@
     "es",
     "ja"
   ],
+  "/deal_the_issue_of_UUID": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/how_to_encrypt_the_disk_for_jetson": [
     "cn",
     "en",
@@ -1020,6 +1068,12 @@
     "ja"
   ],
   "/Jetson_FAQ": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/make_diy_bsp_for_jetson": [
     "cn",
     "en",
     "es",
@@ -2147,6 +2201,12 @@
     "es",
     "ja"
   ],
+  "/yolov11_for_speed_estimation_and_loitering_detection_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/yolov8_on_ai_box_for_fall_climbing_tracking": [
     "cn",
     "en",
@@ -2519,6 +2579,12 @@
     "es",
     "ja"
   ],
+  "/ai_parking_slot_monitoring_demo_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/getting_started_for_home_assistant_with_recamera": [
     "cn",
     "en",
@@ -2538,6 +2604,12 @@
     "ja"
   ],
   "/getting_started_in_Wechat_work_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/integration_of_real-time_heat_map_with_grafana_data_dashboard": [
     "cn",
     "en",
     "es",
@@ -3066,6 +3138,12 @@
     "ja"
   ],
   "/License": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/semtech_lr2021_evk_getting_started": [
     "cn",
     "en",
     "es",
@@ -3707,6 +3785,12 @@
     "es",
     "ja"
   ],
+  "/r1225_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/Network/SenseCAP_Network/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide": [
     "cn",
     "en",
@@ -4085,6 +4169,12 @@
     "es",
     "ja"
   ],
+  "/lerobot_soarm101_Rynnbot_Developer_Kit": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/lerobot_starai_arm": [
     "cn",
     "en",
@@ -4098,6 +4188,17 @@
     "ja"
   ],
   "/starai_arm_ros_moveit": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/stackforce_giant_bipedal_wheeled_robot": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/stackforce_mini_wheeled_legged_robot": [
     "cn",
     "en",
     "es",
@@ -5909,6 +6010,18 @@
     "es",
     "ja"
   ],
+  "/xiao_epaper_display_board_overview": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_with_ee02": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/epaper_ee04_eezstudio": [
     "cn",
     "en",
@@ -5934,6 +6047,12 @@
     "ja"
   ],
   "/ee04_with_platformio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/EN04_opendisplay": [
     "cn",
     "en",
     "es",
@@ -7888,6 +8007,12 @@
     "es",
     "ja"
   ],
+  "/iot_button_v2_ha_discovery": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/seeed_iot_button_with_zigbee": [
     "cn",
     "en",
@@ -8218,6 +8343,12 @@
     "es",
     "ja"
   ],
+  "/respeaker_voice_assistant": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/respeaker_xvf3800_xiao_volume": [
     "cn",
     "en",
@@ -8368,6 +8499,72 @@
     "es",
     "ja"
   ],
+  "/xiao_esp32c5_esp-mesh_audio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_homeassistant": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_buletooth_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_wifi_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_pin_multiplexing": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_with_micropyhton": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_with_platformio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_zigbee_arduino": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_zigbee_homeassistant": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_zigbee_idf": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_esp32c6_aws_iot": [
     "cn",
     "en",
@@ -8410,7 +8607,7 @@
     "es",
     "ja"
   ],
-  "/xiao_pin_multiplexing_esp33c6": [
+  "/xiao_pin_multiplexing_esp32c6": [
     "cn",
     "en",
     "es",
@@ -8495,6 +8692,12 @@
     "ja"
   ],
   "/geolocation_tracker_with_XIAO_ESP32S3": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/XIAO_ESP32S3_GPIO_Viewer": [
     "cn",
     "en",
     "es",
@@ -8764,6 +8967,12 @@
     "es",
     "ja"
   ],
+  "/xiao_mg24_sense_micropython": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_mg24_pin_multiplexing": [
     "cn",
     "en",
@@ -8963,6 +9172,12 @@
     "ja"
   ],
   "/xiao_ra4m1_pin_multiplexing": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_ra4m1_micropython": [
     "cn",
     "en",
     "es",
@@ -9532,12 +9747,6 @@
     "es",
     "ja"
   ],
-  "/iot_botton_connect_to_esphome": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/Sensor/SenseCAP/Accessories/Industrial-Grade-Optical-Rain-Gauge-RG-15": [
     "cn",
     "en",
@@ -9575,6 +9784,12 @@
     "ja"
   ],
   "/get_started_with_lorawan_tracker": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/t1000e_for_lorawan_introduction": [
     "cn",
     "en",
     "es",
@@ -10181,6 +10396,12 @@
     "ja"
   ],
   "/Tracker_WiFi_Geolocation": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/sensecap_t2000_tracker_ttn": [
     "cn",
     "en",
     "es",

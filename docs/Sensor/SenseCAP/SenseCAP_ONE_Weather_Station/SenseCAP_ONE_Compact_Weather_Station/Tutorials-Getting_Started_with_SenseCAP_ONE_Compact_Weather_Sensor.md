@@ -5,8 +5,9 @@ keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor
+sku: 101990787,101990693,101990784,101990902,101990961,101991022,101991021,101991023,101991024,101991044,101991102,101991050,101991232,101991141
 last_update:
-  date: 12/8/2025
+  date: 12/25/2025
   author: Janet
 ---
 # Getting Started with SenseCAP ONE Compact Weather Sensor
@@ -305,8 +306,6 @@ The temperature needs to be obtained through a complement calculation.
 
 5. Then the temperature measurement is -1000/1000 = -1°
 
-
-
 **S500 decode**
 
 Read register 0x0000~0x0005.
@@ -426,7 +425,7 @@ Commands come in two formats:
 ### Command List
 
 Please refer to:
-[SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.5.pdf)
+[SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)
 
 ## SDI-12
 
@@ -442,8 +441,7 @@ The sequence of each byte sent is shown in the following figure:
 
 ### SDI-12 command and response
 
-Please refer to:
-&lt;https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf&gt;
+Please refer to [SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)
 
 ### SDI-12 Read
 
@@ -515,4 +513,11 @@ Then send "continuous measurement command 0R2! the device returns 4 measured val
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image58.png" /></div>
 
 ## Resource
-[SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.5.pdf)
+
+[SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)
+
+## FAQ
+
+**How is the average wind speed and direction calculated?**
+
+The default average time window is 5s. Within this window, the device will collect wind speed and directiondatafive times and return an average value.

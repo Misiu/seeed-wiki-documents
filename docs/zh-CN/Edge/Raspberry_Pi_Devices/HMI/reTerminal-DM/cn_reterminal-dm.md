@@ -6,9 +6,10 @@ keywords:
   - reTerminal-DM
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/reterminal-dm
+sku: 114070201,114070221,E23010420,114070262
 last_update:
-  date: 04/23/2023
-  author: Peter Pan
+  date: 12/15/2025
+  author: David Du
 ---
 # reTerminal DM 入门指南
 
@@ -16,7 +17,7 @@ last_update:
 
 reTerminal DM 是一款 10.1 英寸开源工业 HMI - 一个集成设备主机，用于统一数据流并管理现场设备。
 
-基于 Raspberry Pi CM4，作为面板 PC、HMI、PLC、IIoT 网关一体化设备，reTerminal DM 是新一代交互式传感中枢，配备 IP65 工业级大屏幕。
+基于 Raspberry Pi CM4，作为面板 PC、HMI、PLC、IIoT 网关四合一设备，reTerminal DM 是新一代交互式传感中枢，配备 IP65 工业级大屏幕。
 
 它具有丰富的可扩展性和混合连接性，支持 CAN 总线、RS485、RS232、千兆以太网端口和其他接口，以及强大的无线通信能力，如 4G、LoRa®、WiFi 和 BLE。
 
@@ -31,12 +32,12 @@ reTerminal DM 是一款 10.1 英寸开源工业 HMI - 一个集成设备主机�
 
 ## 特性
 
-- HMI、PLC、面板 PC 和网关一体化：完美适用于分布式中枢设备
+- HMI、PLC、面板 PC 和网关四合一：完美适用于分布式中枢设备
 - 事件驱动应用的低代码编程：原生集成 Node-RED，支持基于流的编辑和一键部署，兼容所有在 Raspberry Pi 上运行的软件
-- 恶劣工作环境的坚固设计：IP65 前面板，-10~50°C 工作温度
+- 适用于恶劣工作环境的坚固设计：IP65 前面板，-10~50°C 工作温度
 - 混合连接性：支持 4G LTE、LoRaWAN®、WiFi、BLE、RS485/RS232、CAN 总线、1000M 以太网、USB、HDMI
 - 软硬件开源设计：由 Raspberry Pi CM4 驱动，欢迎定制或衍生产品
-- [产品保修：两年保修](Edge/Raspberry_Pi_Devices/HMI/reTerminal-DM/reterminal-dm-warranty.md)
+- [产品保修：两年保修](/cn/reterminal-dm-warranty)
 
 > \*4G 和 LoRa® 模块默认不随 reTerminal DM 提供，请根据需要购买相关模块。
 
@@ -73,7 +74,7 @@ reTerminal DM 是一款 10.1 英寸开源工业 HMI - 一个集成设备主机�
       <td data-style="height: 36px; width: 63.1933%;" style={{height: 36, width: '63.1933%'}}>Raspbian<br />SenseCraft Edge OS</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 98.6555%;" colSpan={2} style={{height: 18, width: '98.6555%'}}><strong>显示屏</strong></td>
+      <td data-style="height: 18px; width: 98.6555%;" colSpan={2} style={{height: 18, width: '98.6555%'}}><strong>显示</strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>尺寸</td>
@@ -227,7 +228,7 @@ reTerminal DM 是一款 10.1 英寸开源工业 HMI - 一个集成设备主机�
       <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>10~90% RH</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 98.6555%;" colSpan={2} style={{height: 18, width: '98.6555%'}}><strong>机械</strong></td>
+      <td data-style="height: 18px; width: 98.6555%;" colSpan={2} style={{height: 18, width: '98.6555%'}}><strong>机械 </strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>尺寸</td>
@@ -246,14 +247,14 @@ reTerminal DM 是一款 10.1 英寸开源工业 HMI - 一个集成设备主机�
       <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>1.8Kg</td>
     </tr>
     <tr>
-      <td data-style="width: 98.6555%;" colSpan={2} style={{width: '98.6555%'}}><strong>认证</strong></td>
+      <td data-style="width: 98.6555%;" colSpan={2} style={{width: '98.6555%'}}><strong>认证 </strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}> </td>
       <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>CE, FCC, RoHS, Telec, REACH</td>
     </tr>
     <tr>
-      <td data-style="width: 98.6555%;" colSpan={2} style={{width: '98.6555%'}}><strong>其他</strong></td>
+      <td data-style="width: 98.6555%;" colSpan={2} style={{width: '98.6555%'}}><strong>其他</strong> </td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>RTC</td>
@@ -287,7 +288,7 @@ reTerminal DM 是一款 10.1 英寸开源工业 HMI - 一个集成设备主机�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/power-diagram.png" /></div>
 
-reTerminal DM 支持两种电源供应选项：DC 端子和 PoE 端口。默认情况下，reTerminal DM 通过 DC 端子供电，而 **PoE 电源供应是可选的**。这提供了电源选择的灵活性，并允许与各种电源轻松集成。
+reTerminal DM 支持两种电源供应选项：DC 端子和 PoE 端口。默认情况下，reTerminal DM 通过 DC 端子供电，而 **PoE 电源供应是可选的**。这提供了电源选择的灵活性，并允许轻松集成各种电源。
 
 ### 电源端子
 
@@ -301,24 +302,24 @@ reTerminal DM 的额定电压为 12~24 V。电源通过 2 针电源端子块连�
 标准产品默认不包含 PoE 模块，Seeed 可根据要求为批量定制订单提供 PoE 焊接和组装服务，请联系 odm@seeed.cc，
 :::
 
-如果安装了 PoE 模块，reTerminal DM 的 LAN1 端口可以支持 PoE 供电，提供了一种通过以太网为设备供电的便捷高效方式。此选项简化了安装过程并减少了所需的布线量，使其成为电源有限或电源插座不易获得的应用的理想解决方案。
+如果安装了 PoE 模块，reTerminal DM 的 LAN1 端口可以支持 PoE 电源供应，提供了一种便捷高效的以太网供电方式。此选项简化了安装过程并减少了所需的布线量，使其成为电源有限或电源插座不易获得的应用的理想解决方案。
 
 - PoE 输入：范围 44~57V；典型值 48V
 - PoE 输出：12V，最大 1.1A
 
 ### 功耗
 
-请参考下表了解 Seeed Studio 实验室测试的 reTerminal DM 功耗。请注意，此数值仅供参考，因为测试方法和环境可能导致结果出现差异。
+请参考下表了解 Seeed Studio 实验室测试的 reTerminal DM 功耗数据。请注意，此数值仅供参考，因为测试方法和环境可能导致结果存在差异。
 
 | 状态   | 电压 | 电流 | 功耗 | 描述 |
 |   ---      |    ---    |   ---      |         ---          |        ---    |
 |关机  |         |  0.6mA  |                   | 关机和断电状态下的静态功耗测试。|
 |空闲      |24V      |  0.165A |    3.96W          | 通过端子插座为 reTerminal DM 设备提供 24V 电源，运行默认 Seeed Studio 系统时的输入电流测试，未运行任何测试程序。|
-|满载 |24V      |  0.37A  |    8.88W          | 使用 "stress -c 4" 命令配置 CPU 满载运行，同时播放视频并执行 CAN 和 RS485 通信。未连接外部设备。 |
+|满载 |24V      |  0.37A  |    8.88W          | 使用 "stress -c 4" 命令配置 CPU 满载运行，同时播放视频并进行 CAN 和 RS485 通信。未连接外部设备。 |
 
 ### 开机和关机
 
-reTerminal DM 默认不带电源按钮，一旦连接电源，系统将自动启动。关机时，请在操作系统中选择关机选项，等待系统完全关闭后再切断电源。要重启系统，只需重新连接电源即可。
+reTerminal DM 默认不配备电源按钮，一旦连接电源，系统将自动启动。关机时，请在操作系统中选择关机选项，等待系统完全关闭后再切断电源。要重启系统，只需重新连接电源即可。
 
 :::note
 请注意，关机后请至少等待 10 秒钟再重启系统，以便内部电容器完全放电。
@@ -336,15 +337,15 @@ reTerminal DM 默认不带电源按钮，一旦连接电源，系统将自动启
 
 ### 麦克风
 
-reTerminal DM 配备了两个 MEMS 麦克风，位于屏幕下方的左右两侧。这些麦克风可以配置为双麦克风阵列，提供卓越的声音拾取能力。麦克风通过 I2S 接口与音频编解码器芯片通信，而编解码器芯片通过 PCM 接口与 CM4 通信。为 reTerminal DM 选择的音频编解码器芯片是 TI TLV320AIC3104 低功耗立体声音频编解码器。
+reTerminal DM 配备了两个 MEMS 麦克风，位于屏幕下方的左右两侧。这些麦克风可以配置为双麦克风阵列，提供卓越的声音拾取能力。麦克风通过 I2S 接口与音频编解码器芯片通信，而编解码器芯片通过 PCM 接口与 CM4 通信。reTerminal DM 选用的音频编解码器芯片是 TI TLV320AIC3104 低功耗立体声音频编解码器。
 
 :::warning
-需要注意的是，为了实现前面板的 IP65 防护等级，麦克风开口覆盖有防水声学膜。请避免使用尖锐物体触碰麦克风开口。
+需要注意的是，为了实现前面板 IP65 防护等级，麦克风开孔覆盖了防水声学膜。请避免使用尖锐物体触碰麦克风开孔。
 :::
 
 与麦克风接口：
 
-请在设备上打开 `Terminal` 应用程序并输入 `arecord -l` 来查找麦克风驱动程序：
+请在设备上打开 `Terminal` 应用程序并输入 `arecord -l` 来查找麦克风驱动：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/arecord-device.png" /></div>
 
@@ -358,7 +359,7 @@ reTerminal DM 配备了两个 MEMS 麦克风，位于屏幕下方的左右两侧
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/led-indicator.png" /></div>
 
-reTerminal DM 具有三个 LED 指示灯，用于指示机器的运行状态。请参考下表了解每个 LED 的具体功能和状态：
+reTerminal DM 配备三个 LED 指示灯，用于指示设备的运行状态。请参考下表了解每个 LED 的具体功能和状态：
 
 #### LED 引脚分配
 
@@ -380,9 +381,9 @@ reTerminal DM 具有三个 LED 指示灯，用于指示机器的运行状态。�
 | 0 | 8 | SDRAM 故障|
 | 0 | 9 | SDRAM 不足|
 | 0 | 10 | 处于 HALT 状态|
-| 2 | 1 | 分区不是 FAT|
+| 2 | 1 | 分区不是 FAT 格式|
 | 2 | 2 | 从分区读取失败 |
-| 2 | 3 | 扩展分区不是 FAT|
+| 2 | 3 | 扩展分区不是 FAT 格式|
 | 2 | 4 | 文件签名/哈希不匹配 - Pi 4|
 | 4 | 4 | 不支持的板卡类型|
 | 4 | 5 | 致命固件错误|
@@ -392,9 +393,9 @@ reTerminal DM 具有三个 LED 指示灯，用于指示机器的运行状态。�
 </div>
 
 :::note
-如果 ACT LED 以规律的四次闪烁模式闪烁，则无法找到引导代码 (start.elf)<br/>
-如果 ACT LED 以不规律的模式闪烁，则表示启动已开始。<br/>
-如果 ACT LED 不闪烁，则 EEPROM 代码可能已损坏，请在不连接任何设备的情况下重试以确认。<br/>
+如果 ACT LED 以规律的四次闪烁模式闪烁，表示无法找到启动代码 (start.elf)<br/>
+如果 ACT LED 以不规律的模式闪烁，表示启动已开始。<br/>
+如果 ACT LED 不闪烁，则 EEPROM 代码可能已损坏，请尝试在不连接任何设备的情况下重试以确认。<br/>
 更多详情请查看 Raspberry Pi 论坛：<br/>
 STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums<br/>
 更多详情请查看 Raspberry Pi 论坛：https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151<br/>
@@ -439,9 +440,9 @@ cat in_illuminance_input
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/buzzer.png" /></div>
 
-reTerminal DM 在屏幕右下角配备了一个有源蜂鸣器，可用于各种用途，如报警和事件通知。蜂鸣器通过 PCA9535 GPIO 扩展 IC 控制，该 IC 为设备提供额外的数字 I/O 通道。
+reTerminal DM 配备一个有源蜂鸣器，位于屏幕右下角，可用于各种用途，如报警和事件通知。蜂鸣器通过 PCA9535 GPIO 扩展 IC 控制，该 IC 为设备提供额外的数字 I/O 通道。
 
-要测试和控制蜂鸣器，您可以简单地将 `1` 或 `0` 设置到 `/sys/class/leds/usr-buzzer/brightness` 文件：
+要测试和控制蜂鸣器，您可以简单地向 `/sys/class/leds/usr-buzzer/brightness` 文件设置 `1` 或 `0`：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/toggle_buzzer.png" /></div>
 
@@ -490,7 +491,7 @@ reTerminal DM 在屏幕右下角配备了一个有源蜂鸣器，可用于各种
 
 #### DI/DO
 
-reTerminal DM 支持 4 个数字输入和 4 个数字输出通道，所有通道都经过光学隔离，有效保护主板免受电压尖峰或其他电气干扰。
+reTerminal DM 支持 4 个数字输入和 4 个数字输出通道，所有通道都采用光电隔离，有效保护主板免受电压尖峰或其他电气干扰。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/DI-DO.png" /></div>
 
@@ -520,13 +521,13 @@ reTerminal DM 的数字输入和输出使用负逻辑，终端 IO 与 CM4 GPIO �
 
 |终端数字输入 | CM4 GPIO 检测信号 |
 | ---                   | ---                    |
-| 低电平                   | 高电平                   |
-| 高电平                  | 低电平                    |
+| Low                   | High                   |
+| High                  | Low                    |
 
 | CM4 GPIO 输出       | 终端数字输出|
 | ---                   | ---                    |
-| 高电平                  | 低电平                    |
-| 低电平                   | 高电平                   |
+| High                  | Low                    |
+| Low                   | High                   |
 
 :::
 
@@ -556,9 +557,9 @@ raspi-gpio get 16
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/gpio16-state.png" /></div>
 
-其中 `GPIO16` 的当前状态设置为 `INPUT` 并 `下拉`，当前引脚电平为 `1`，表示 `高电平`，根据上表，这也意味着当前终端数字输入 `DI1` 为 `低电平`
+其中 `GPIO16` 的当前状态设置为 `INPUT` 并 `pulling Down`，当前引脚电平为 `1`，表示 `High`，这也意味着根据上表，当前终端数字输入 `DI1` 为 `Low`
 
-让我们通过将 `DI1` 终端连接到 `5V 电源` 的 `正极` 引脚，然后将 `5V 电源` 的 `地线` 连接到 `GND_DI`，为 `DI1` 提供 `高电平` 信号
+让我们通过将 `DI1` 终端连接到 `5V 电源` 的 `正极` 引脚，然后将 `5V 电源` 的 `地线` 连接到 `GND_DI`，为 `DI1` 提供 `High` 信号
 
 ```sh
 raspi-gpio get 16
@@ -566,7 +567,7 @@ raspi-gpio get 16
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/gpio16-state-high.png" /></div>
 
-此时 `GPIO16` 的当前引脚电平为 `0`，表示 `低电平`，根据上表，这也意味着当前终端数字输入 `DI1` 为 `高电平`
+其中 `GPIO16` 的当前引脚电平为 `0`，表示 `Low`，这也意味着根据上表，当前终端数字输入 `DI1` 为 `High`
 
 ###### 数字输出
 
@@ -574,7 +575,7 @@ raspi-gpio get 16
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/DO.png" /></div>
 
-要控制数字输出状态值，首先我们需要将引脚状态设置为 `输出` 并 `下拉`：
+要控制数字输出状态值，首先我们需要将引脚状态设置为 `Output` 和 `pulling Down`：
 
 ```sh
 #set current pin state
@@ -587,9 +588,9 @@ raspi-gpio get 24
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/gpio24-state-set.png" /></div>
 
-其中对应 `DO1` 的 `GPIO24` 被设置为 `输出` 和 `下拉` 状态，`GPIO24` 电平设置为 `高电平`
+其中对应 `DO1` 的 `GPIO24` 被设置为 `Output` 和 `pulling down` 状态，并且 `GPIO24` 电平设置为 `High`
 
-现在让我们将 `GPIO24` 设置为 `低电平`，这意味着 `DO1` 输出被驱动为 `高电平`。
+现在让我们将 `GPIO24` 设置为 `Low`，这意味着 `DO1` 输出被驱动为 `High`。
 
 ```sh
 #set current pin state
@@ -606,10 +607,10 @@ raspi-gpio get 24
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/RS485.png" /></div>
 
-reTerminal DM 通过其 20 引脚连接器配备了 RS485 接口，该接口在信号和电源方面都进行了隔离，以确保在工业和自动化应用中的安全可靠运行。`RS485 A` 和 `RS485 B` 信号使用电容隔离，提供出色的 EMI 抗扰性，满足 RS485 接口的高速通信要求。
+reTerminal DM 通过其 20 引脚连接器配备了 RS485 接口，该接口在信号和电源方面都进行了隔离，以确保在工业和自动化应用中的安全可靠运行。`RS485 A` 和 `RS485 B` 信号使用电容隔离，提供出色的 EMI 抗扰性，并满足 RS485 接口的高速通信要求。
 
 :::note
-默认已安装 120Ω 的终端电阻。
+默认已安装 120Ω 终端电阻。
 RS485 接口使用隔离电源，这意味着连接到 RS485 接口的外部设备的地信号应连接到 GND_ISO 引脚。
 :::
 
@@ -620,7 +621,7 @@ RS485 接口使用隔离电源，这意味着连接到 RS485 接口的外部设�
 :::note
 请注意，RS485 端口是 `/dev/ttyACM1` 或 `/dev/ttyCH340USB1`，这取决于您运行的操作系统。
 :::
-请在您的主机上使用您喜欢的串行通信工具来执行以下测试：
+请在您的主机计算机上使用您喜欢的串行通信工具来执行以下测试：
 在 reTerminal DM 上运行 python 代码来测试 RS485 串行连接，此代码将按以下方式设置 RS485 串行端口
 
 波特率 -> 9600
@@ -697,7 +698,7 @@ reTerminal DM 的 20 引脚连接器还包括一个 RS232 接口，该接口未�
 请注意，地线引脚需要连接到 `RX` 引脚旁边的 `GD` 引脚，确保不是 `GS` 引脚。
 :::
 
-以下是从 reTerminal DM 向主机发送数据的测试 python 脚本：
+以下是从 reTerminal DM 向主机计算机发送数据的测试 python 脚本：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/rs232-serial-send-example.png" /></div>
 
@@ -734,7 +735,7 @@ except KeyboardInterrupt:
 
 ```
 
-以下是在 reTerminal DM 上接收从主机发送的数据的测试 python 脚本，
+以下是在 reTerminal DM 上接收从主机计算机发送的数据的测试 python 脚本，
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/rs232-serial-receive-example.png" /></div>
 
@@ -775,7 +776,7 @@ except KeyboardInterrupt:
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/can.png" /></div>
 
-reTerminal DM 具有支持 CAN FD（控制器局域网灵活数据速率）协议的 CAN 接口。CAN 接口使用电容隔离，提供出色的 EMI 保护，确保在工业和自动化应用中的可靠通信。默认已安装 120Ω 的终端电阻。
+reTerminal DM 具有支持 CAN FD（控制器局域网灵活数据速率）协议的 CAN 接口。CAN 接口使用电容隔离，提供出色的 EMI 保护，并确保在工业和自动化应用中的可靠通信。默认已安装 120Ω 终端电阻。
 
 :::note
 CAN 接口使用隔离电源，这意味着连接到 CAN 接口的外部设备的地信号应连接到 GND_ISO 引脚
@@ -849,7 +850,7 @@ gcc canreceive.c -o canreceive
 
 <div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/usb-c.png" /></div>
 
-USB Type-C 是一个 USB 2.0 端口，用于串行调试或刷写操作系统镜像，具体取决于启动开关位置。有关刷写操作系统的信息，请参考 [刷写操作系统 Wiki 页面](/cn/reterminal-dm-flash-OS)
+USB Type-C 是一个 USB 2.0 端口，用于串行调试或刷写操作系统镜像，具体取决于启动开关位置。有关刷写操作系统，请参考 [刷写操作系统 Wiki 页面](/cn/reterminal-dm-flash-OS)
 
 ### SIM 卡槽
 
@@ -1152,7 +1153,7 @@ echo "c" > /proc/sysrq-trigger
 
 #### 背光
 
-您可以为背光设置 6 个亮度级别，从 0（关闭）到 5（最大亮度）。
+背光有 6 个亮度级别可以设置，从 0（关闭）到 5（最大亮度）。
 您可以使用以下命令控制亮度。
 
 ```sh
@@ -1249,7 +1250,7 @@ AT+QCFG="usbnet",1
 AT+CFUN=1,1
 ```
 
-然后您可以重启或等待一段时间，让模块从您的 SIM 卡运营商获取网络连接。
+然后您可以重启或等待一段时间，让模块从您的 SIM 卡运营商获取互联网连接。
 
 您也可以使用 `ifconfig` 命令查询 reTerminal DM 的网络状态。
 
@@ -1258,7 +1259,7 @@ AT+CFUN=1,1
 ### LoraWAN® 模块
 
 :::note
-reTerminal DM 支持 WM1302 LoraWAN® 模块的 USB 和 SPI 版本，但是 USB 版本需要使用为 4G 模块设计的 Mini PCIe 插槽，这意味着如果您想同时使用 4G 模块和 LoraWAN® 模块，请选择 WM1302 LoraWAN® 模块的 SPI 版本。
+reTerminal DM 支持 WM1302 LoraWAN® 模块的 USB 和 SPI 版本，但是 USB 版本需要使用为 4G 模块设计的 Mini PCIe，这意味着如果您想同时使用 4G 模块和 LoraWAN® 模块，请选择 WM1302 LoraWAN® 模块的 SPI 版本。
 :::
 
 <!-- Code -->
@@ -1277,7 +1278,7 @@ import TabItem from '@theme/TabItem';
     </a>
 </div>
 
-**步骤 1.** 请参考 [LoraWAN® 模块硬件组装](/cn/reterminal-dm-hardware-guide/#assembly-lora-module-and-antenna) 指南，将 `WM1302 SPI LoraWAN® 模块` 安装到 `LoraWAN® Mini PCIe 插槽` 中，您应该能看到 *`Lora`* 丝印。
+**步骤 1.** 请参考 [LoraWAN® 模块硬件组装](/cn/reterminal-dm-hardware-guide/#assembly-lora-module-and-antenna) 指南，将 `WM1302 SPI LoraWAN® Module` 安装到 `LoraWAN® Mini PCIe slot` 中，您应该能看到 *`Lora`* 丝印。
 通过安装模块来安装必要的软件包 build-essential（build essential 软件包是一个 Debian 软件包，包含从源代码创建 DEB 软件包所需的工具）。
 
 ```sh
@@ -1286,7 +1287,7 @@ sudo apt install git
 sudo apt-get install build-essential
 ```
 
-**步骤 2.** 在命令行中输入 `sudo raspi-config` 打开 Raspberry Pi 软件配置工具：
+**步骤 2.** 在命令行中输入 `sudo raspi-config` 打开 Raspberry Pi Software Configuration Tool：
 
 - 选择 Interface Options
 - 选择 SPI，然后选择 **Yes** 启用它
@@ -1315,7 +1316,7 @@ cd ~/sx1302_hal/packet_forwarder
 vim reset_lgw.sh
 ```
 
-使用 VIM 修改 reset_lgw.sh 脚本，如下所示：
+使用文本编辑器修改 reset_lgw.sh 脚本如下：
 
 ```sh
 #!/bin/bash
@@ -1397,7 +1398,8 @@ sed -i 's/spidev0.0/spidev0.1/g'  global_conf.json.sx1250.US915
 
 **步骤 6.** 启动 LoraWAN® 模块
 
-然后运行以下代码，根据您的 WM1302 工作频率版本启动 LoraWAN® 模块。
+根据您使用的模块，在相应的 `global_conf.json.sx1250.xxxxx` 中选择您首选的 LoRaWAN 网络服务器 `server_address` 和网关 EUI `gateway_ID`，并将 `up/down port` 修改为 `1700`。然后运行以下代码启动集中器：
+
 
 ```sh
 cd ~/sx1302_hal/packet_forwarder
@@ -1405,19 +1407,11 @@ cd ~/sx1302_hal/packet_forwarder
 # for WM1302 LoRaWAN Gateway Module (SPI) - EU868
 ./lora_pkt_fwd -c global_conf.json.sx1250.EU868
 
-# for WM1302 LoRaWAN Gateway Module (USB) - EU868
-./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
-
 # for WM1302 LoRaWAN Gateway Module (SPI) - US915
 ./lora_pkt_fwd -c global_conf.json.sx1250.US915
-
-# for WM1302 LoRaWAN Gateway Module (USB) - US915
-./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
 ```
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/wm1302-spi.png"/></div>
-
-请在相应的 `global_conf.json.sx1250.xxxxx` 中选择您首选的 Lora® 网络服务器 `server_address` 和 EUI `gateway_ID`，并将 `up/down port` 修改为 `1700` 以启动集中器。
 
 
 
@@ -1432,11 +1426,11 @@ cd ~/sx1302_hal/packet_forwarder
     </a>
 </div>
 
-**步骤 1.** 请参考 [LoraWAN® 模块硬件组装](/cn/reterminal-dm-hardware-guide/#assembly-4g-module-and-antenna) 指南，将 `WM1302 USB LoraWAN® 模块` 安装到 `4G Mini PCIe 插槽` 中，您应该能看到 *`4G`* 丝印。
+**步骤 1.** 请参考 [LoraWAN® 模块硬件组装](/cn/reterminal-dm-hardware-guide/#assembly-4g-module-and-antenna) 指南，将 `WM1302 USB LoraWAN® Module` 安装到 `4G Mini PCIe slot` 中，您应该能看到 *`4G`* 丝印。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/dmlora.png"/></div>
 
-**步骤 2.** 在命令行中输入 `sudo raspi-config` 打开 Raspberry Pi 软件配置工具：
+**步骤 2.** 在命令行中输入 `sudo raspi-config` 打开 Raspberry Pi Software Configuration Tool：
 
 - 选择 Interface Options
 - 选择 I2C，然后选择 **Yes** 启用它
@@ -1471,7 +1465,7 @@ lsusb
 在我的情况下，我们的 WM1302 使用的是 `STMicroelectronics Virtual COM Port`，所以我们可以获得产品 ID `5740`
 
 **步骤 5-2.**
-然后使用产品 ID 号 `5740` 获取 USB 设备，在这种情况下我们得到 USB 端口号 `1-1.4.1`：
+然后使用产品 ID 号 `5740` 获取 USB 设备，在这种情况下我们获得 USB 端口号 `1-1.4.1`：
 
 ```sh
 sudo dmesg | grep 5740
@@ -1479,7 +1473,7 @@ sudo dmesg | grep 5740
 sudo modprobe cdc_acm
 ```
 
-然后我们可以按如下方式获取设备端口：
+然后我们可以获得设备端口如下：
 
 ```sh
 sudo dmesg | grep 1-1.4.1
@@ -1501,17 +1495,22 @@ sed -i 's/ttyACM0/ttyACM2/g'  global_conf.json.sx1250.US915.USB
 
 **步骤 6.** 启动 LoraWAN® 模块
 
-然后运行以下代码，根据您的 WM1302 工作频率版本启动 LoraWAN® 模块。
+根据您使用的模块，在相应的 `global_conf.json.sx1250.xxxxx` 中选择您首选的 LoRaWAN 网络服务器 `server_address` 和网关 EUI `gateway_ID`，并将 `up/down port` 修改为 `1700`。然后运行以下代码启动集中器：
+
 
 ```sh
-USB version
-$ cd ~/sx1302_hal/packet_forwarder
-$ ./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
+cd ~/sx1302_hal/packet_forwarder
+
+# Please select one of the following comands based on your module
+
+# for WM1302 LoRaWAN Gateway Module (USB) - EU868
+./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
+
+# for WM1302 LoRaWAN Gateway Module (USB) - US915
+./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
 ```
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/wm1302-usb.png"/></div>
-
-请选择您首选的 Lora® 网络服务器，并使用上图所示的 `EUI ID` 来设置连接。
 
 </TabItem>
 </Tabs>
@@ -1520,7 +1519,7 @@ $ ./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
 
 ### PCIe 扩展卡
 
-reTerminal DM 具有来自 CM4 的 PCIe 接口，支持 PCIe 2.0，理论上提供最大 5Gbps 的传输速度。这允许扩展各种高速接口，如千兆以太网和 NVMe SSD。我们基于 PCIe、USB 和 I2C 接口开发了多种扩展卡，以满足不同场景的需求。这也便于定制需求。
+reTerminal DM 具有从 CM4 派生的 PCIe 接口，支持 PCIe 2.0，理论上提供最大 5Gbps 的传输速度。这允许扩展各种高速接口，如千兆以太网和 NVMe SSD。我们基于 PCIe、USB 和 I2C 接口开发了多种扩展卡，以满足不同场景的需求。这也便于定制需求。
 
 :::note
 请注意，标准产品默认不包含 PCIe 扩展卡。Seeed 可以为批量定制订单提供组装服务。
